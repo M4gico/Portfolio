@@ -1,0 +1,213 @@
+/* Projects/Experience Section */
+.projects,
+.experience {
+  padding: 3rem 2rem;
+  margin: 2rem 0;
+}
+
+/* Header Container */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+#top-page-academic,
+#top-page-personal,
+#top-page-internship,
+#top-page-exp,
+#top-page-skills {
+  margin-bottom: 0;
+}
+
+/* Navigation Buttons */
+.btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.pre-btn,
+.nxt-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.pre-btn:hover,
+.nxt-btn:hover {
+  background: rgba(102, 126, 234, 0.5);
+  border-color: #667eea;
+  transform: scale(1.1);
+}
+
+.pre-btn img,
+.nxt-btn img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+
+.pre-btn img {
+  transform: rotate(180deg);
+}
+
+/* Experience Container */
+.experience-container {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 2rem 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: #667eea rgba(255, 255, 255, 0.1);
+}
+
+.experience-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.experience-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.experience-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 10px;
+}
+
+/* Experience Card */
+.experience-card {
+  min-width: 300px;
+  max-width: 350px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+  border-color: rgba(102, 126, 234, 0.5);
+}
+
+.experience-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.experience-brand {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 60px;
+}
+
+.experience-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin: 1rem 0;
+}
+
+.experience-thumb {
+  max-width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.experience-date {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.experience-description {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.experience-description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-description li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.experience-description li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .btns {
+    display: none;
+  }
+  
+  .experience-container {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+  
+  .experience-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  .projects,
+  .experience {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-brand {
+    font-size: 1.2rem;
+    min-height: auto;
+  }
+  
+  .experience-card {
+    padding: 1.5rem;
+  }
+}
