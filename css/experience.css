@@ -76,9 +76,9 @@
   padding: 1.5rem 1rem;
   scrollbar-width: thin;
   scrollbar-color: #667eea rgba(255, 255, 255, 0.1);
-  justify-content: center;
+  justify-content: safe center;
   max-width: 100%;
-  margin: 10 auto;
+  margin: 0 auto;
 }
 
 .experience-container::-webkit-scrollbar {

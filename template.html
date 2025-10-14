@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="[Project Name] - Antoine BINNER Portfolio Project">
+  <meta name="keywords" content="Antoine BINNER, Electronic Engineer, [Project Keywords]">
+  <meta name="author" content="Antoine BINNER">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="[Project Name] - Antoine BINNER">
+  <meta property="og:description" content="[Project Description]">
+  <meta property="og:url" content="https://your-github-username.github.io/project-name.html">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://your-github-username.github.io/project-name.html">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/nav.css">
+  <link rel="stylesheet" type="text/css" href="css/head.css">
+  <link rel="stylesheet" type="text/css" href="css/project-detail.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" href="css/scroll_progress.css">
+
+  <title>[Project Name] - Antoine BINNER Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Global Font Settings -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    nav, 
+    .mobile-menu,
+    .desktop-menu,
+    footer,
+    .footer-content,
+    .footer-links {
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6, 
+    .section-title, 
+    .card-title, 
+    .feature-title,
+    .skill,
+    .button,
+    .cta-button {
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    p, 
+    .card-description, 
+    .feature-description,
+    li {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <!-- Progress Bar for Scrolling -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <!-- Skip to content link for accessibility -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <!-- Navigation -->
+    <nav id="nav" role="navigation" aria-label="Main Navigation">
+      <!-- Hamburger Menu Icon for Mobile -->
+      <div class="hamburger-icon">
+          <a href="index.html">
+              <img src="images/picture_me.jpeg" alt="Antoine BINNER" class="nav-logo-img">
+          </a>
+          <!-- Menu Icon -->
+          <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle navigation menu" tabindex="0">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+          </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu hidden">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#academic">Academic Projects</a>
+          <a href="template.html">Personal Projects</a>
+          <a href="index.html#internship">Internship</a>
+          <a href="index.html#contact">Contact</a>
+      </div>
+      <!-- Desktop nav menu -->
+      <ul class="desktop-menu">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#academic">Academic Projects</a></li>
+          <li><a href="template.html">Personal Projects</a></li>
+          <li><a href="index.html#internship">Internship</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section with Project Title -->
+    <section class="project-hero section-lighter">
+      <h1 class="project-main-title">[PROJECT NAME]</h1>
+    </section>
+
+    <!-- Project Section 1 - Dark Background -->
+    <section class="project-section section-darker">
+      <div class="project-container">
+        <div class="project-header">
+          <div class="project-logo">
+            <i class="fas fa-gamepad fa-3x" style="color: #4facfe;"></i>
+            <!-- Or use an image: <img src="images/project-logo.png" alt="Project Logo"> -->
+          </div>
+          <h2 class="project-section-title">[Section Title - e.g., Overview]</h2>
+        </div>
+        <div class="project-content">
+          <div class="project-text">
+            <p>
+              [Project description text goes here. Explain the purpose, goals, and key features of this aspect of the project.
+              This section uses 1/5 spacing on each side for optimal readability.]
+            </p>
+            <p>
+              [Additional paragraphs can be added here to provide more details about the project.]
+            </p>
+            <ul class="project-list">
+              <li>Key feature or achievement 1</li>
+              <li>Key feature or achievement 2</li>
+              <li>Key feature or achievement 3</li>
+            </ul>
+          </div>
+          <div class="project-image-container">
+            <img src="images/project-image-1.jpg" alt="Project Image" class="project-image">
+            <p class="image-caption">[Image caption or description]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Section 2 - Light Background -->
+    <section class="project-section section-lighter">
+      <div class="project-container">
+        <div class="project-header">
+          <div class="project-logo">
+            <i class="fas fa-cog fa-3x" style="color: #764ba2;"></i>
+            <!-- Or use an image: <img src="images/project-logo-2.png" alt="Project Logo"> -->
+          </div>
+          <h2 class="project-section-title">[Section Title - e.g., Technical Details]</h2>
+        </div>
+        <div class="project-content">
+          <div class="project-text">
+            <p>
+              [Technical description text goes here. Explain the technologies used, implementation details, 
+              and technical challenges overcome.]
+            </p>
+            <h3 class="project-subsection-title">Technologies Used</h3>
+            <ul class="project-list">
+              <li>Technology 1 - Description</li>
+              <li>Technology 2 - Description</li>
+              <li>Technology 3 - Description</li>
+            </ul>
+          </div>
+          <div class="project-image-container">
+            <img src="images/project-image-2.jpg" alt="Project Technical Image" class="project-image">
+            <p class="image-caption">[Image caption or description]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Section 3 - Dark Background -->
+    <section class="project-section section-darker">
+      <div class="project-container">
+        <div class="project-header">
+          <div class="project-logo">
+            <i class="fas fa-lightbulb fa-3x" style="color: #43e97b;"></i>
+          </div>
+          <h2 class="project-section-title">[Section Title - e.g., Challenges & Solutions]</h2>
+        </div>
+        <div class="project-content">
+          <div class="project-text">
+            <p>
+              [Description of challenges faced and solutions implemented.]
+            </p>
+            <h3 class="project-subsection-title">Key Challenges</h3>
+            <ul class="project-list">
+              <li>Challenge 1 and how it was solved</li>
+              <li>Challenge 2 and how it was solved</li>
+              <li>Challenge 3 and how it was solved</li>
+            </ul>
+          </div>
+          <div class="project-image-container">
+            <img src="images/project-image-3.jpg" alt="Project Solution Image" class="project-image">
+            <p class="image-caption">[Image caption or description]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Section 4 - Light Background -->
+    <section class="project-section section-lighter">
+      <div class="project-container">
+        <div class="project-header">
+          <div class="project-logo">
+            <i class="fas fa-rocket fa-3x" style="color: #fa709a;"></i>
+          </div>
+          <h2 class="project-section-title">[Section Title - e.g., Results & Impact]</h2>
+        </div>
+        <div class="project-content">
+          <div class="project-text">
+            <p>
+              [Description of project results, outcomes, and impact.]
+            </p>
+            <h3 class="project-subsection-title">Project Outcomes</h3>
+            <ul class="project-list">
+              <li>Outcome 1 - Measurable result</li>
+              <li>Outcome 2 - Achievement or metric</li>
+              <li>Outcome 3 - Learning or improvement</li>
+            </ul>
+          </div>
+          <div class="project-image-container">
+            <img src="images/project-image-4.jpg" alt="Project Results Image" class="project-image">
+            <p class="image-caption">[Image caption or description]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Projects Button -->
+    <section class="back-section section-lighter">
+      <div class="back-container">
+        <a href="index.html#personal" class="back-btn">
+          <i class="fas fa-arrow-left"></i> Back to All Projects
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#academic">Academic Projects</a>
+        <a href="template.html">Personal Projects</a>
+        <a href="index.html#internship">Internship</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <p>© 2025 Antoine BINNER</p>
+      <p>Electronic Engineering Student Portfolio</p>
+    </div>
+  </footer>
+
+  <!-- Theme Switcher -->
+  <button class="theme-switcher" onclick="toggleThemeMenu()" aria-label="Change Theme">
+    <i class="fas fa-palette"></i>
+  </button>
+  
+  <div class="theme-menu" id="themeMenu">
+    <div class="theme-option" onclick="changeTheme('purple-indigo')">
+      <div class="theme-color-preview" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+      <span>Purple Indigo</span>
+    </div>
+    <div class="theme-option" onclick="changeTheme('blue-cyan')">
+      <div class="theme-color-preview" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+      <span>Blue Cyan</span>
+    </div>
+    <div class="theme-option" onclick="changeTheme('green-teal')">
+      <div class="theme-color-preview" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+      <span>Green Teal</span>
+    </div>
+    <div class="theme-option" onclick="changeTheme('orange-red')">
+      <div class="theme-color-preview" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+      <span>Orange Sunset</span>
+    </div>
+    <div class="theme-option" onclick="changeTheme('dark-blue')">
+      <div class="theme-color-preview" style="background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);"></div>
+      <span>Dark Blue</span>
+    </div>
+    <hr style="border-color: rgba(255,255,255,0.2); margin: 0.5rem 0;">
+    <div class="theme-option" onclick="openColorAdjuster()" style="background: rgba(255, 255, 255, 0.1);">
+      <i class="fas fa-sliders-h" style="font-size: 1.5rem;"></i>
+      <span>Adjust Colors</span>
+    </div>
+  </div>
+
+  <!-- Color Adjuster Panel -->
+  <div class="color-adjuster" id="colorAdjuster">
+    <div class="adjuster-header">
+      <span>🎨 Dark Blue Adjuster</span>
+      <button class="close-adjuster" onclick="closeColorAdjuster()">✕</button>
+    </div>
+    
+    <div class="slider-container">
+      <div class="slider-label">
+        <span>Blue Lightness</span>
+        <span class="slider-value" id="lightnessValue">55%</span>
+      </div>
+      <input type="range" min="20" max="80" value="55" class="lightness-slider" id="lightnessSlider" oninput="updateLightness(this.value)">
+      <small style="color: rgba(255,255,255,0.6); font-size: 0.8rem;">← Darker | Lighter →</small>
+    </div>
+    
+    <div class="color-preview-box" id="colorPreview"></div>
+    
+    <div class="adjuster-buttons">
+      <button class="reset-btn" onclick="resetLightness()">Reset</button>
+      <button class="apply-btn" onclick="applyLightness()">Apply</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/scroll_progress.js"></script>
+  <script src="js/theme_switcher.js"></script>
+</body>
+</html>
