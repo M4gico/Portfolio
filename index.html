@@ -80,26 +80,15 @@
       font-family: 'Poppins', sans-serif;
     }
 
-    /* Gradient animation for the name */
+    /* Single color for the name */
     .gradient-name {
       font-size: 2.5em;
       font-weight: 700;
       margin-bottom: 20px;
       font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(to right, #667eea, #764ba2, #667eea);
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: #667eea;
       text-shadow: 2px 2px 4px rgba(102, 126, 234, 0.3);
       letter-spacing: 2px;
-      animation: gradient 3s linear infinite;
-    }
-    
-    @keyframes gradient {
-      to {
-        background-position: 200% center;
-      }
     }
   </style>
 </head>
@@ -118,7 +107,7 @@
       <!-- Hamburger Menu Icon for Mobile -->
       <div class="hamburger-icon">
           <a href="#home">
-              <span class="nav-logo-text">AB</span>
+              <img src="images/picture_me.jpeg" alt="Antoine BINNER" class="nav-logo-img">
           </a>
           <!-- Menu Icon -->
           <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle navigation menu" tabindex="0">
@@ -131,16 +120,15 @@
       <div class="mobile-menu hidden">
           <a href="#home">Home</a>
           <a href="#academic">Academic Projects</a>
-          <a href="#personal">Personal Projects</a>
+          <a href="personal-projects.html">Personal Projects</a>
           <a href="#internship">Internship</a>
           <a href="#contact">Contact</a>
       </div>
       <!-- Desktop nav menu -->
       <ul class="desktop-menu">
-          <li><a href="#home"><span class="nav-logo-text">AB</span></a></li>
           <li><a href="#home">Home</a></li>
           <li><a href="#academic">Academic Projects</a></li>
-          <li><a href="#personal">Personal Projects</a></li>
+          <li><a href="personal-projects.html">Personal Projects</a></li>
           <li><a href="#internship">Internship</a></li>
           <li><a href="#contact">Contact</a></li>
       </ul>
@@ -149,7 +137,7 @@
 
   <main id="main-content">
     <!-- Home Section -->
-    <section id="home" class="about-me">
+    <section id="home" class="about-me section-lighter">
         <div class="headshot-placeholder">
           <i class="fas fa-user fa-5x"></i>
         </div>
@@ -160,85 +148,8 @@
             Explore my portfolio!</p>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="bg-custom text-white font-sans p-5 text-center">
-        <h1 id="top-page-skills">Skills</h1>
-        <div class="container mx-auto">
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center">
-                <!-- Technical Skills -->
-                <div class="col-span-2 md:col-span-3 lg:col-span-4">
-                    <h3 class="font-semibold text-lg">Technical Skills:</h3>
-                    <div class="flex flex-wrap gap-2 mt-2 justify-center">
-                        <div class="flex items-center gap-2 bg-purple-500 px-3 py-1 rounded">
-                            <i class="fas fa-microchip"></i>
-                            <span>Embedded Systems</span>
-                        </div>
-                        <div class="flex items-center gap-2 bg-indigo-500 px-3 py-1 rounded">
-                            <i class="fas fa-wave-square"></i>
-                            <span>Circuit Design</span>
-                        </div>
-                        <div class="flex items-center gap-2 bg-yellow-600 px-3 py-1 rounded">
-                            <i class="fas fa-bolt"></i>
-                            <span>Signal Processing</span>
-                        </div>
-                        <div class="flex items-center gap-2 bg-pink-500 px-3 py-1 rounded">
-                            <i class="fas fa-sliders-h"></i>
-                            <span>PCB Design</span>
-                        </div>
-                        <div class="flex items-center gap-2 bg-green-600 px-3 py-1 rounded">
-                            <i class="fas fa-tools"></i>
-                            <span>Electronics Testing</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Programming Languages -->
-                <div class="col-span-2 md:col-span-3 lg:col-span-4 mt-4">
-                    <h3 class="font-semibold text-lg">Programming Languages:</h3>
-                    <div class="flex flex-wrap gap-2 mt-2 justify-center">
-                        <div class="flex items-center gap-2 bg-purple-500 px-3 py-1 rounded">
-                            <i class="fab fa-cuttlefish"></i>
-                            <span>C/C++</span>
-                        </div>
-                        <div class="flex items-center gap-2 bg-yellow-500 px-3 py-1 rounded">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="flex items-center gap-2 bg-blue-600 px-3 py-1 rounded">
-                            <i class="fas fa-code"></i>
-                            <span>VHDL/Verilog</span>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Tools and Frameworks -->
-                <div class="col-span-2 md:col-span-3 lg:col-span-4 mt-4">
-                    <h3 class="font-semibold text-lg">Tools and Frameworks:</h3>
-                    <div class="flex flex-wrap gap-2 mt-2 justify-center">
-                        <div class="flex items-center gap-2 bg-yellow-400 px-3 py-1 rounded">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
-                        </div>
-                        <div class="flex items-center gap-2 bg-green-500 px-3 py-1 rounded">
-                            <i class="fas fa-microchip"></i>
-                            <span>Arduino</span>
-                        </div>
-                        <div class="flex items-center gap-2 bg-red-500 px-3 py-1 rounded">
-                            <i class="fas fa-wave-square"></i>
-                            <span>Oscilloscope</span>
-                        </div>
-                        <div class="flex items-center gap-2 bg-gray-600 px-3 py-1 rounded">
-                            <i class="fas fa-terminal"></i>
-                            <span>MATLAB</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Academic Projects Section -->
-    <section id="academic" class="projects">
+    <section id="academic" class="projects section-darker">
         <div class="header-container">
             <div class="title-container">
                 <h1 id="top-page-academic">Academic Projects</h1>
@@ -304,7 +215,7 @@
     </section>
 
     <!-- Personal Projects Section -->
-    <section id="personal" class="projects">
+    <section id="personal" class="projects section-lighter">
         <div class="header-container">
             <div class="title-container">
                 <h1 id="top-page-personal">Personal Projects</h1>
@@ -316,61 +227,96 @@
         </div>
         <section class="experience">
             <div id="personal-container" class="experience-container">
-                <!-- Example Personal Project Card -->
+                <!-- Personal Project 1: Game Controller -->
                 <div class="experience-card">
                     <div class="experience-info">
-                        <h2 class="experience-brand">Arduino Weather Station</h2>
+                        <h2 class="experience-brand">Design of a Game Controller</h2>
                         <div class="experience-image">
-                            <i class="fas fa-cloud-sun fa-5x" style="color: #4facfe;"></i>
+                            <i class="fas fa-gamepad fa-5x" style="color: #4facfe;"></i>
                         </div>
                         <p class="experience-date">
                             <em>2024</em>
                         </p>
                         <p class="experience-description">
-                            Built a weather station using Arduino and various sensors to monitor temperature, humidity, and pressure.
+                            Designed and built a custom game controller with ergonomic layout and programmable buttons for enhanced gaming experience.
                         </p>
                     </div>
-                    <button class="card-btn">Learn More</button>
+                    <button class="card-btn" onclick="window.location.href='personal-projects.html'">Learn More</button>
                 </div>
 
-                <!-- Add more personal project cards here -->
+                <!-- Personal Project 2: ESP32 Communication -->
                 <div class="experience-card">
                     <div class="experience-info">
-                        <h2 class="experience-brand">Home Automation System</h2>
+                        <h2 class="experience-brand">ESP32 Wireless Communication</h2>
                         <div class="experience-image">
-                            <i class="fas fa-home fa-5x" style="color: #43e97b;"></i>
+                            <i class="fas fa-broadcast-tower fa-5x" style="color: #43e97b;"></i>
                         </div>
                         <p class="experience-date">
                             <em>2024</em>
                         </p>
                         <p class="experience-description">
-                            Developed a smart home system with IoT devices for lighting and temperature control.
+                            Developed wireless communication system between two ESP32 microcontrollers using WiFi and Bluetooth protocols for IoT applications.
                         </p>
                     </div>
-                    <button class="card-btn">Learn More</button>
+                    <button class="card-btn" onclick="window.location.href='personal-projects.html'">Learn More</button>
                 </div>
 
+                <!-- Personal Project 3: Content Creation -->
                 <div class="experience-card">
                     <div class="experience-info">
-                        <h2 class="experience-brand">LED Cube Display</h2>
+                        <h2 class="experience-brand">Electronics Content Creation</h2>
                         <div class="experience-image">
-                            <i class="fas fa-cube fa-5x" style="color: #fa709a;"></i>
+                            <i class="fas fa-video fa-5x" style="color: #fa709a;"></i>
                         </div>
                         <p class="experience-date">
-                            <em>2023</em>
+                            <em>Ongoing</em>
                         </p>
                         <p class="experience-description">
-                            Created an 8x8x8 LED cube with animated patterns controlled by a microcontroller.
+                            Creating educational content about electronics, circuits, and embedded systems on social media platforms to share knowledge and inspire others.
                         </p>
                     </div>
-                    <button class="card-btn">Learn More</button>
+                    <button class="card-btn" onclick="window.location.href='personal-projects.html'">Learn More</button>
+                </div>
+
+                <!-- Personal Project 4: Video Game Creation -->
+                <div class="experience-card">
+                    <div class="experience-info">
+                        <h2 class="experience-brand">Video Game Development</h2>
+                        <div class="experience-image">
+                            <i class="fab fa-unity fa-5x" style="color: #222222 !important;"></i>
+                        </div>
+                        <p class="experience-date">
+                            <em>2023-2024</em>
+                        </p>
+                        <p class="experience-description">
+                            Created multiple video games using game engines and programming, combining creativity with technical skills in game design and development.
+                        </p>
+                    </div>
+                    <button class="card-btn" onclick="window.location.href='personal-projects.html'">Learn More</button>
+                </div>
+
+                <!-- Personal Project 5: Website Design -->
+                <div class="experience-card">
+                    <div class="experience-info">
+                        <h2 class="experience-brand">Website Design & Development</h2>
+                        <div class="experience-image">
+                            <i class="fas fa-globe fa-5x" style="color: #00f2fe;"></i>
+                        </div>
+                        <p class="experience-date">
+                            <em>2024</em>
+                        </p>
+                        <p class="experience-description">
+                            Designed and developed responsive websites using HTML, CSS, and JavaScript with modern UI/UX principles and best practices.
+                        </p>
+                    </div>
+                    <button class="card-btn" onclick="window.location.href='personal-projects.html'">Learn More</button>
                 </div>
             </div>
         </section>
     </section>
 
     <!-- Internship Section -->
-    <section id="internship" class="projects">
+    <section id="internship" class="projects section-darker">
         <div class="header-container">
             <div class="title-container">
                 <h1 id="top-page-internship">Internship Experience</h1>
@@ -426,7 +372,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-custom text-white p-5 py-0 text-center">
+    <section id="contact" class="bg-custom text-white p-5 py-0 text-center section-lighter">
         <h1 id="top-page-contact">Get in touch</h1>
         <div class="flex justify-center gap-10">
             <!-- Email -->
@@ -453,12 +399,12 @@
   <footer>
     <div class="footer-content">
       <a href="#home">
-        <span class="footer-logo-text">AB</span>
+        <img src="images/picture_me.jpeg" alt="Antoine BINNER" class="footer-logo-img">
       </a>
       <div class="footer-links">
         <a href="#home">Home</a>
         <a href="#academic">Academic Projects</a>
-        <a href="#personal">Personal Projects</a>
+        <a href="personal-projects.html">Personal Projects</a>
         <a href="#internship">Internship</a>
         <a href="#contact">Contact</a>
       </div>
@@ -467,7 +413,65 @@
     </div>
   </footer>
 
+  <!-- Theme Switcher -->
+  <button class="theme-switcher" onclick="toggleThemeMenu()" aria-label="Change Theme">
+    <i class="fas fa-palette"></i>
+  </button>
+  
+  <div class="theme-menu" id="themeMenu">
+    <div class="theme-option" onclick="changeTheme('purple-indigo')">
+      <div class="theme-color-preview" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+      <span>Purple Indigo</span>
+    </div>
+    <div class="theme-option" onclick="changeTheme('blue-cyan')">
+      <div class="theme-color-preview" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+      <span>Blue Cyan</span>
+    </div>
+    <div class="theme-option" onclick="changeTheme('green-teal')">
+      <div class="theme-color-preview" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+      <span>Green Teal</span>
+    </div>
+    <div class="theme-option" onclick="changeTheme('orange-red')">
+      <div class="theme-color-preview" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+      <span>Orange Sunset</span>
+    </div>
+    <div class="theme-option" onclick="changeTheme('dark-blue')">
+      <div class="theme-color-preview" style="background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);"></div>
+      <span>Dark Blue</span>
+    </div>
+    <hr style="border-color: rgba(255,255,255,0.2); margin: 0.5rem 0;">
+    <div class="theme-option" onclick="openColorAdjuster()" style="background: rgba(255, 255, 255, 0.1);">
+      <i class="fas fa-sliders-h" style="font-size: 1.5rem;"></i>
+      <span>Adjust Colors</span>
+    </div>
+  </div>
+
+  <!-- Color Adjuster Panel -->
+  <div class="color-adjuster" id="colorAdjuster">
+    <div class="adjuster-header">
+      <span>🎨 Dark Blue Adjuster</span>
+      <button class="close-adjuster" onclick="closeColorAdjuster()">✕</button>
+    </div>
+    
+    <div class="slider-container">
+      <div class="slider-label">
+        <span>Blue Lightness</span>
+        <span class="slider-value" id="lightnessValue">55%</span>
+      </div>
+      <input type="range" min="20" max="80" value="55" class="lightness-slider" id="lightnessSlider" oninput="updateLightness(this.value)">
+      <small style="color: rgba(255,255,255,0.6); font-size: 0.8rem;">← Darker | Lighter →</small>
+    </div>
+    
+    <div class="color-preview-box" id="colorPreview"></div>
+    
+    <div class="adjuster-buttons">
+      <button class="reset-btn" onclick="resetLightness()">Reset</button>
+      <button class="apply-btn" onclick="applyLightness()">Apply</button>
+    </div>
+  </div>
+
   <script src="js/script.js"></script>
   <script src="js/scroll_progress.js"></script>
+  <script src="js/theme_switcher.js"></script>
 </body>
 </html>

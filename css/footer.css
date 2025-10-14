@@ -22,6 +22,20 @@ footer {
   letter-spacing: 2px;
 }
 
+.footer-logo-img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.footer-logo-img:hover {
+  border-color: #764ba2;
+  transform: scale(1.05);
+}
+
 .footer-links {
   display: flex;
   gap: 2rem;

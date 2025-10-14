@@ -20,6 +20,21 @@ nav {
   letter-spacing: 2px;
 }
 
+/* Logo Image */
+.nav-logo-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.nav-logo-img:hover {
+  border-color: #764ba2;
+  transform: scale(1.05);
+}
+
 /* Desktop Menu */
 .desktop-menu {
   display: flex;
