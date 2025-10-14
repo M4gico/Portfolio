@@ -25,6 +25,8 @@
 #top-page-exp,
 #top-page-skills {
   margin-bottom: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 /* Navigation Buttons */

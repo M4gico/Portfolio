@@ -46,6 +46,22 @@ function setupCarousel(containerId, prevBtnId, nextBtnId) {
   
   if (!container || !prevBtn || !nextBtn) return;
   
+  // Function to check if scrolling is needed
+  function checkScrollNeeded() {
+    const isScrollable = container.scrollWidth > container.clientWidth;
+    const btnsContainer = prevBtn.parentElement;
+    
+    if (isScrollable) {
+      btnsContainer.style.display = 'flex';
+    } else {
+      btnsContainer.style.display = 'none';
+    }
+  }
+  
+  // Check on load and on window resize
+  checkScrollNeeded();
+  window.addEventListener('resize', checkScrollNeeded);
+  
   prevBtn.addEventListener('click', () => {
     container.scrollBy({
       left: -350,
