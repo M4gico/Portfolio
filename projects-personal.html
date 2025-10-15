@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Projects - Antoine BINNER Portfolio">
+  <meta name="keywords" content="Antoine BINNER, Personal Projects, Game Controller, Video Games, PyQt, Electronics Content, Web Development">
+  <meta name="author" content="Antoine BINNER">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Personal Projects - Antoine BINNER">
+  <meta property="og:description" content="Explore Antoine BINNER's personal projects in electronics, game development, and content creation">
+  <meta property="og:url" content="https://your-github-username.github.io/projects-personal.html">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://your-github-username.github.io/projects-personal.html">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/nav.css">
+  <link rel="stylesheet" type="text/css" href="css/head.css">
+  <link rel="stylesheet" type="text/css" href="css/project-detail.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" href="css/scroll_progress.css">
+
+  <title>Personal Projects - Antoine BINNER Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Global Font Settings -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    nav, 
+    .mobile-menu,
+    .desktop-menu,
+    footer,
+    .footer-content,
+    .footer-links {
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6, 
+    .section-title, 
+    .card-title, 
+    .feature-title,
+    .skill,
+    .button,
+    .cta-button {
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    p, 
+    .card-description, 
+    .feature-description,
+    li {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <!-- Progress Bar for Scrolling -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <!-- Skip to content link for accessibility -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <!-- Navigation -->
+    <nav id="nav" role="navigation" aria-label="Main Navigation">
+      <!-- Hamburger Menu Icon for Mobile -->
+      <div class="hamburger-icon">
+          <a href="index.html">
+              <img src="images/picture_me.jpeg" alt="Antoine BINNER" class="nav-logo-img">
+          </a>
+          <!-- Menu Icon -->
+          <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle navigation menu" tabindex="0">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+          </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu hidden">
+          <a href="index.html#home">Home</a>
+          <a href="academic-projects.html">Academic Projects</a>
+          <a href="projects-personal.html">Personal Projects</a>
+          <a href="index.html#internship">Internship</a>
+          <a href="index.html#contact">Contact</a>
+      </div>
+      <!-- Desktop nav menu -->
+      <ul class="desktop-menu">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="academic-projects.html">Academic Projects</a></li>
+          <li><a href="projects-personal.html">Personal Projects</a></li>
+          <li><a href="index.html#internship">Internship</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section with Project Title -->
+    <section class="project-hero section-lighter">
+      <h1 class="project-main-title">PERSONAL PROJECTS</h1>
+    </section>
+
+    <!-- Project 1: Video Game Development - Dark Background -->
+    <section id="video-games" class="project-section section-darker">
+      <div class="project-container">
+        <div class="project-header">
+          <div class="project-logo">
+            <i class="fab fa-unity fa-3x" style="color: #222222;"></i>
+          </div>
+          <h2 class="project-section-title">Video Game Development</h2>
+        </div>
+        <div class="project-content">
+          <div class="project-text">
+            <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 1rem;">
+              2023-2024
+            </p>
+            <p>
+              Created multiple video games using game engines and programming, combining creativity with technical skills in game design and development.
+            </p>
+            <p>
+              This ongoing project showcases my ability to blend artistic vision with technical implementation, creating engaging interactive experiences.
+            </p>
+            <h3 class="project-subsection-title">Technologies & Skills</h3>
+            <ul class="project-list">
+              <li>Unity game engine for 2D and 3D game development</li>
+              <li>C# programming for game logic and mechanics</li>
+              <li>Game design principles including level design and player progression</li>
+              <li>Asset creation and integration</li>
+            </ul>
+          </div>
+          <div class="project-image-container">
+            <img src="images/project-gamedev.jpg" alt="Video Game Development" class="project-image">
+            <p class="image-caption">Game development workspace and projects</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project 2: Game Controller - Light Background -->
+    <section id="game-controller" class="project-section section-lighter">
+      <div class="project-container">
+        <div class="project-header">
+          <div class="project-logo">
+            <i class="fas fa-gamepad fa-3x" style="color: #4facfe;"></i>
+          </div>
+          <h2 class="project-section-title">Design of a Game Controller</h2>
+        </div>
+        <div class="project-content">
+          <div class="project-text">
+            <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 1rem;">
+              2024
+            </p>
+            <p>
+              Designed and built a custom game controller with ergonomic layout and programmable buttons for enhanced gaming experience.
+            </p>
+            <p>
+              This project involved combining hardware design principles with user experience considerations to create a comfortable and functional gaming peripheral.
+            </p>
+            <h3 class="project-subsection-title">Key Features</h3>
+            <ul class="project-list">
+              <li>Ergonomic button layout optimized for comfort</li>
+              <li>Programmable buttons for custom game configurations</li>
+              <li>Enhanced grip design for extended gaming sessions</li>
+            </ul>
+          </div>
+          <div class="project-image-container">
+            <img src="images/game_controller_schematic.png" alt="Game Controller Design" class="project-image">
+            <p class="image-caption">Electric schematic of the game controller on KiCad software</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project 3: PyQt Application - Dark Background -->
+    <section id="pyqt-app" class="project-section section-darker">
+      <div class="project-container">
+        <div class="project-header">
+          <div class="project-logo">
+            <i class="fab fa-python fa-3x" style="color: #43e97b;"></i>
+          </div>
+          <h2 class="project-section-title">PyQt Application interacting with OS</h2>
+        </div>
+        <div class="project-content">
+          <div class="project-text">
+            <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 1rem;">
+              2024
+            </p>
+            <p>
+              Developed a desktop application using PyQt framework that interacts with the operating system for system monitoring and automation tasks.
+            </p>
+            <p>
+              This project demonstrates my proficiency in Python GUI development and system-level programming, creating practical tools for everyday use.
+            </p>
+            <h3 class="project-subsection-title">Technical Implementation</h3>
+            <ul class="project-list">
+              <li>PyQt5 framework for cross-platform GUI development</li>
+              <li>OS-level API integration for system monitoring</li>
+              <li>Automated task scheduling and execution</li>
+              <li>Real-time data visualization and reporting</li>
+            </ul>
+          </div>
+          <div class="project-image-container">
+            <img src="images/project-pyqt.jpg" alt="PyQt Application" class="project-image">
+            <p class="image-caption">PyQt desktop application interface</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project 4: Website Design - Light Background -->
+    <section id="website-design" class="project-section section-lighter">
+      <div class="project-container">
+        <div class="project-header">
+          <div class="project-logo">
+            <i class="fas fa-globe fa-3x" style="color: #00f2fe;"></i>
+          </div>
+          <h2 class="project-section-title">Website Design & Development</h2>
+        </div>
+        <div class="project-content">
+          <div class="project-text">
+            <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 1rem;">
+              2024
+            </p>
+            <p>
+              Designed and developed responsive websites using HTML, CSS, and JavaScript with modern UI/UX principles and best practices.
+            </p>
+            <p>
+              This portfolio itself is a testament to this project, showcasing my ability to create clean, modern, and functional web interfaces.
+            </p>
+            <h3 class="project-subsection-title">Web Development Skills</h3>
+            <ul class="project-list">
+              <li>HTML5, CSS3, and JavaScript for modern web development</li>
+              <li>Responsive design for mobile, tablet, and desktop devices</li>
+              <li>Modern UI/UX principles and accessibility standards</li>
+              <li>Performance optimization and SEO best practices</li>
+            </ul>
+          </div>
+          <div class="project-image-container">
+            <img src="images/project-website.jpg" alt="Website Design & Development" class="project-image">
+            <p class="image-caption">Responsive website design and development</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project 5: Content Creation - Dark Background -->
+    <section id="content-creation" class="project-section section-darker">
+      <div class="project-container">
+        <div class="project-header">
+          <div class="project-logo">
+            <i class="fas fa-video fa-3x" style="color: #fa709a;"></i>
+          </div>
+          <h2 class="project-section-title">Electronics Content Creation</h2>
+        </div>
+        <div class="project-content">
+          <div class="project-text">
+            <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 1rem;">
+              Ongoing
+            </p>
+            <p>
+              Creating educational content about electronics, circuits, and embedded systems on social media platforms to share knowledge and inspire others.
+            </p>
+            <p>
+              Through this project, I combine my technical expertise with communication skills to make complex electronic concepts accessible and engaging for a broader audience.
+            </p>
+            <h3 class="project-subsection-title">Content Focus</h3>
+            <ul class="project-list">
+              <li>Electronics fundamentals and circuit analysis tutorials</li>
+              <li>Embedded systems projects and demonstrations</li>
+              <li>PCB design and manufacturing processes</li>
+              <li>Tips and best practices for electronics enthusiasts</li>
+            </ul>
+          </div>
+          <div class="project-image-container">
+            <img src="images/project-content.jpg" alt="Electronics Content Creation" class="project-image">
+            <p class="image-caption">Educational electronics content production</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Projects Button -->
+    <section class="back-section section-lighter">
+      <div class="back-container">
+        <a href="index.html#personal" class="back-btn">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html#home">Home</a>
+        <a href="academic-projects.html">Academic Projects</a>
+        <a href="projects-personal.html">Personal Projects</a>
+        <a href="index.html#internship">Internship</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <p>© 2025 Antoine BINNER</p>
+      <p>Electronic Engineering Student Portfolio</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/scroll_progress.js"></script>
+  <script src="js/theme_switcher.js"></script>
+</body>
+</html>
