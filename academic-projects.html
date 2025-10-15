@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic Projects - Antoine BINNER Portfolio">
+  <meta name="keywords" content="Antoine BINNER, Academic Projects, Sumo Robot, Propeller Kart, Electronics">
+  <meta name="author" content="Antoine BINNER">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Academic Projects - Antoine BINNER">
+  <meta property="og:description" content="Explore Antoine BINNER's academic projects in robotics and electronics">
+  <meta property="og:url" content="https://m4gico.github.io/projects-academic.html">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://m4gico.github.io/projects-academic.html">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/nav.css">
+  <link rel="stylesheet" type="text/css" href="css/head.css">
+  <link rel="stylesheet" type="text/css" href="css/project-detail.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" href="css/scroll_progress.css">
+
+  <title>Academic Projects - Antoine BINNER Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Global Font Settings -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    nav, 
+    .mobile-menu,
+    .desktop-menu,
+    footer,
+    .footer-content,
+    .footer-links {
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6, 
+    .section-title, 
+    .card-title, 
+    .feature-title,
+    .skill,
+    .button,
+    .cta-button {
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    p, 
+    .card-description, 
+    .feature-description,
+    li {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <!-- Progress Bar for Scrolling -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <!-- Skip to content link for accessibility -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <!-- Navigation -->
+    <nav id="nav" role="navigation" aria-label="Main Navigation">
+      <!-- Hamburger Menu Icon for Mobile -->
+      <div class="hamburger-icon">
+          <a href="index.html">
+              <img src="images/picture_me.jpeg" alt="Antoine BINNER" class="nav-logo-img">
+          </a>
+          <!-- Menu Icon -->
+          <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle navigation menu" tabindex="0">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+          </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu hidden">
+          <a href="index.html#home">Home</a>
+          <a href="projects-academic.html">Academic Projects</a>
+          <a href="projects-personal.html">Personal Projects</a>
+          <a href="index.html#internship">Internship</a>
+          <a href="index.html#contact">Contact</a>
+      </div>
+      <!-- Desktop nav menu -->
+      <ul class="desktop-menu">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="projects-academic.html">Academic Projects</a></li>
+          <li><a href="projects-personal.html">Personal Projects</a></li>
+          <li><a href="index.html#internship">Internship</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section with Project Title -->
+    <section class="project-hero section-lighter">
+      <h1 class="project-main-title">ACADEMIC PROJECTS</h1>
+    </section>
+
+    <!-- Project 1: Sumo Robot - Dark Background -->
+    <section id="sumo-robot" class="project-section section-darker">
+      <div class="project-container">
+        <div class="project-header">
+          <div class="project-logo">
+            <img src="images/robot_sumo.png" alt="Sumo Robot" style="width: 80px; height: 80px; object-fit: contain;">
+          </div>
+          <h2 class="project-section-title">Sumo Robot</h2>
+        </div>
+        <div class="project-content">
+          <div class="project-text">
+            <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 1rem;">
+              Third Semester
+            </p>
+            <p>
+              Designed and verified the sensor integration of a tracker robot for competitive sumo robot matches. This project involved comprehensive work on embedded systems, sensor fusion, and PCB design.
+            </p>
+            <p>
+              The sumo robot project challenged us to create an autonomous robot capable of detecting opponents and pushing them out of a ring, requiring precise sensor integration and real-time decision-making algorithms.
+            </p>
+            <h3 class="project-subsection-title">Key Contributions</h3>
+            <ul class="project-list">
+              <li>Designed and integrated multiple sensors for opponent detection and edge detection</li>
+              <li>Verified sensor accuracy and calibration for optimal performance</li>
+              <li>Contributed to PCB design and layout for compact robot integration</li>
+              <li>Implemented sensor fusion algorithms for improved tracking</li>
+            </ul>
+            <h3 class="project-subsection-title">Technologies Used</h3>
+            <ul class="project-list">
+              <li>Embedded C programming for microcontroller control</li>
+              <li>IR sensors for opponent detection</li>
+              <li>Line sensors for ring edge detection</li>
+              <li>Motor control systems for movement</li>
+              <li>PCB design software for circuit layout</li>
+            </ul>
+          </div>
+          <div class="project-image-container">
+            <img src="images/sumo-robot-detail.jpg" alt="Sumo Robot Project" class="project-image">
+            <p class="image-caption">Sumo robot with integrated sensors and PCB</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project 2: Propeller Kart - Light Background -->
+    <section id="propeller-kart" class="project-section section-lighter">
+      <div class="project-container">
+        <div class="project-header">
+          <div class="project-logo">
+            <img src="images/kart_a_helice.png" alt="Propeller Kart" style="width: 80px; height: 80px; object-fit: contain;">
+          </div>
+          <h2 class="project-section-title">Propeller Kart</h2>
+        </div>
+        <div class="project-content">
+          <div class="project-text">
+            <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 1rem;">
+              Second Semester
+            </p>
+            <p>
+              Designed and verified the data acquisition system for a propeller-driven kart, combined with an infrared (IR) remote control system. This innovative project explored alternative propulsion methods and wireless control systems.
+            </p>
+            <p>
+              The propeller kart project required careful integration of power electronics, control systems, and wireless communication to create a functional and safe vehicle controlled remotely via IR signals.
+            </p>
+            <h3 class="project-subsection-title">Project Highlights</h3>
+            <ul class="project-list">
+              <li>Designed data acquisition system for monitoring kart performance</li>
+              <li>Implemented IR remote control for wireless operation</li>
+              <li>Contributed to PCB design for power distribution and control</li>
+              <li>Verified system safety and performance under various conditions</li>
+              <li>Integrated propeller motor control with remote commands</li>
+            </ul>
+            <h3 class="project-subsection-title">Technical Implementation</h3>
+            <ul class="project-list">
+              <li>IR receiver and transmitter circuits for remote control</li>
+              <li>Motor speed control using PWM signals</li>
+              <li>Data acquisition sensors for speed and performance monitoring</li>
+              <li>Power management circuitry for safe operation</li>
+              <li>PCB design and implementation for compact integration</li>
+            </ul>
+          </div>
+          <div class="project-image-container">
+            <img src="images/propeller-kart-detail.jpg" alt="Propeller Kart Project" class="project-image">
+            <p class="image-caption">Propeller kart with IR control system and PCB</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Projects Button -->
+    <section class="back-section section-darker">
+      <div class="back-container">
+        <a href="index.html#academic" class="back-btn">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html#home">Home</a>
+        <a href="projects-academic.html">Academic Projects</a>
+        <a href="projects-personal.html">Personal Projects</a>
+        <a href="index.html#internship">Internship</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <p>© 2025 Antoine BINNER</p>
+      <p>Electronic Engineering Student Portfolio</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/scroll_progress.js"></script>
+  <script src="js/theme_switcher.js"></script>
+</body>
+</html>

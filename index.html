@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Antoine BINNER - Electronic Engineering Student Portfolio. Explore my academic projects, personal projects, and internship experience.">
+  <meta name="description" content="Antoine BINNER - Electronic Engineering Student Portfolio.">
   <meta name="keywords" content="Antoine BINNER, Electronic Engineer, Engineering Student, Portfolio, Projects">
   <meta name="author" content="Antoine BINNER">
   <meta name="robots" content="index, follow">
@@ -11,10 +11,10 @@
   <!-- Open Graph -->
   <meta property="og:title" content="Antoine BINNER - Electronic Engineering Portfolio">
   <meta property="og:description" content="Explore the portfolio of Antoine BINNER, featuring engineering projects and internship experience.">
-  <meta property="og:url" content="https://your-github-username.github.io/">
+  <meta property="og:url" content="https://m4gico.github.io/Portfolio/">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://your-github-username.github.io/">
+  <link rel="canonical" href="https://m4gico.github.io/Portfolio/">
 
   <!-- Structured Data for SEO -->
   <script type="application/ld+json">
@@ -22,7 +22,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Antoine BINNER",
-    "url": "https://your-github-username.github.io/",
+    "url": "https://m4gico.github.io/Portfolio/",
     "jobTitle": "Electronic Engineering Student"
   }
   </script>
@@ -90,6 +90,18 @@
       text-shadow: 2px 2px 4px rgba(102, 126, 234, 0.3);
       letter-spacing: 2px;
     }
+
+    /* Justify text alignment for project descriptions */
+    .experience-description {
+      text-align: justify;
+    }
+
+    /* Prevent word breaks in project titles */
+    .experience-brand {
+      word-break: keep-all;
+      overflow-wrap: normal;
+      hyphens: none;
+    }
   </style>
 </head>
 <body>
@@ -119,16 +131,16 @@
       <!-- Mobile Menu -->
       <div class="mobile-menu hidden">
           <a href="#home">Home</a>
-          <a href="#academic">Academic Projects</a>
-          <a href="template.html">Personal Projects</a>
+          <a href="academic-projects.html">Academic Projects</a>
+          <a href="projects-personal.html">Personal Projects</a>
           <a href="#internship">Internship</a>
           <a href="#contact">Contact</a>
       </div>
       <!-- Desktop nav menu -->
       <ul class="desktop-menu">
           <li><a href="#home">Home</a></li>
-          <li><a href="#academic">Academic Projects</a></li>
-          <li><a href="template.html">Personal Projects</a></li>
+          <li><a href="academic-projects.html">Academic Projects</a></li>
+          <li><a href="projects-personal.html">Personal Projects</a></li>
           <li><a href="#internship">Internship</a></li>
           <li><a href="#contact">Contact</a></li>
       </ul>
@@ -144,8 +156,8 @@
         <h1 class="gradient-name">Antoine BINNER</h1>
         <p class="about-me-tagline text-base text-gray-300 text-center px-10">
             2nd Year Electronic Engineering Student<br>
-            Passionate about innovation and problem-solving through electronics and programming.<br>
-            Explore my portfolio!</p>
+            Passionate about programming and electronics, explore my different projects below.
+        </p>
         <a href="Files/Antoine_BINNER_CV.pdf" target="_blank" class="cv-download-btn">
             <i class="fas fa-file-pdf"></i> Open CV
         </a>
@@ -167,51 +179,36 @@
                 <!-- Example Academic Project Card -->
                 <div class="experience-card">
                     <div class="experience-info">
-                        <h2 class="experience-brand">Digital Logic Design Project</h2>
+                        <h2 class="experience-brand">Sumo Robot</h2>
                         <div class="experience-image">
-                            <i class="fas fa-microchip fa-5x" style="color: #667eea;"></i>
+                            <img src="images/robot_sumo.png" alt="Robot Sumo" style="width: 100%; max-width: 120px; height: auto;">
                         </div>
                         <p class="experience-date">
-                            <em>Academic Year 2024-2025</em>
+                            <em>Third Semester</em>
                         </p>
                         <p class="experience-description">
-                            Designed and implemented a digital circuit using VHDL/Verilog for FPGA programming.
+                            Designed and verified the sensor integration of a tracker robot and contributed to the creation of the PCB card.
                         </p>
                     </div>
-                    <button class="card-btn">Learn More</button>
+                    <button class="card-btn" onclick="window.location.href='academic-projects.html#sumo-robot'">Learn More</button>
                 </div>
 
                 <!-- Add more academic project cards here -->
                 <div class="experience-card">
                     <div class="experience-info">
-                        <h2 class="experience-brand">Analog Electronics Lab</h2>
+                        <h2 class="experience-brand">Propeller Kart</h2>
                         <div class="experience-image">
-                            <i class="fas fa-wave-square fa-5x" style="color: #764ba2;"></i>
+                            <img src="images/kart_a_helice.png" alt="Propeller Kart" style="width: 100%; max-width: 120px; height: auto;">
                         </div>
                         <p class="experience-date">
-                            <em>Academic Year 2024-2025</em>
+                            <em>Second Semester</em>
                         </p>
                         <p class="experience-description">
-                            Built and tested various analog circuits including amplifiers, filters, and oscillators.
+                           Designed and verified the acquisition system of a propeller kart combined with an IR remote to control it.<br>
+                           Contribued to the PCB design and implementation.
                         </p>
                     </div>
-                    <button class="card-btn">Learn More</button>
-                </div>
-
-                <div class="experience-card">
-                    <div class="experience-info">
-                        <h2 class="experience-brand">Signal Processing Project</h2>
-                        <div class="experience-image">
-                            <i class="fas fa-signal fa-5x" style="color: #f093fb;"></i>
-                        </div>
-                        <p class="experience-date">
-                            <em>Academic Year 2023-2024</em>
-                        </p>
-                        <p class="experience-description">
-                            Implemented digital signal processing algorithms using MATLAB and Python.
-                        </p>
-                    </div>
-                    <button class="card-btn">Learn More</button>
+                    <button class="card-btn" onclick="window.location.href='academic-projects.html#propeller-kart'">Learn More</button>
                 </div>
             </div>
         </section>
@@ -230,7 +227,24 @@
         </div>
         <section class="experience">
             <div id="personal-container" class="experience-container">
-                <!-- Personal Project 1: Game Controller -->
+                <!-- Personal Project 1: Video Game Development -->
+                <div class="experience-card">
+                    <div class="experience-info">
+                        <h2 class="experience-brand">Video Game Development</h2>
+                        <div class="experience-image">
+                            <i class="fab fa-unity fa-5x" style="color: #222222 !important;"></i>
+                        </div>
+                        <p class="experience-date">
+                            <em>2024-Ongoing</em>
+                        </p>
+                        <p class="experience-description">
+                            Programmed multiple video games using Unity and C# combined with friend collaboration, focusing on game artistic design.
+                        </p>
+                    </div>
+                    <button class="card-btn" onclick="window.location.href='projects-personal.html#video-games'">Learn More</button>
+                </div>
+
+                <!-- Personal Project 2: Game Controller -->
                 <div class="experience-card">
                     <div class="experience-info">
                         <h2 class="experience-brand">Design of a Game Controller</h2>
@@ -241,27 +255,10 @@
                             <em>2024</em>
                         </p>
                         <p class="experience-description">
-                            Designed and built a custom game controller with ergonomic layout and programmable buttons for enhanced gaming experience.
+                            Designed and programmed with a friend a custom game controller using open-source software.
                         </p>
                     </div>
-                    <button class="card-btn" onclick="window.location.href='template.html'">Learn More</button>
-                </div>
-
-                <!-- Personal Project 2: Video Game Development -->
-                <div class="experience-card">
-                    <div class="experience-info">
-                        <h2 class="experience-brand">Video Game Development</h2>
-                        <div class="experience-image">
-                            <i class="fab fa-unity fa-5x" style="color: #222222 !important;"></i>
-                        </div>
-                        <p class="experience-date">
-                            <em>2023-2024</em>
-                        </p>
-                        <p class="experience-description">
-                            Created multiple video games using game engines and programming, combining creativity with technical skills in game design and development.
-                        </p>
-                    </div>
-                    <button class="card-btn" onclick="window.location.href='template.html'">Learn More</button>
+                    <button class="card-btn" onclick="window.location.href='projects-personal.html#game-controller'">Learn More</button>
                 </div>
 
                 <!-- Personal Project 3: PyQt Application -->
@@ -272,33 +269,16 @@
                             <i class="fab fa-python fa-5x" style="color: #43e97b;"></i>
                         </div>
                         <p class="experience-date">
-                            <em>2024</em>
+                            <em>2025</em>
                         </p>
                         <p class="experience-description">
-                            Developed a desktop application using PyQt framework that interacts with the operating system for system monitoring and automation tasks.
+                            Developed a desktop application to open multiple .exe applications on different screens using PyQt framework and operating system library.
                         </p>
                     </div>
-                    <button class="card-btn" onclick="window.location.href='template.html'">Learn More</button>
+                    <button class="card-btn" onclick="window.location.href='projects-personal.html#pyqt-app'">Learn More</button>
                 </div>
 
-                <!-- Personal Project 4: Content Creation -->
-                <div class="experience-card">
-                    <div class="experience-info">
-                        <h2 class="experience-brand">Electronics Content Creation</h2>
-                        <div class="experience-image">
-                            <i class="fas fa-video fa-5x" style="color: #fa709a;"></i>
-                        </div>
-                        <p class="experience-date">
-                            <em>Ongoing</em>
-                        </p>
-                        <p class="experience-description">
-                            Creating educational content about electronics, circuits, and embedded systems on social media platforms to share knowledge and inspire others.
-                        </p>
-                    </div>
-                    <button class="card-btn" onclick="window.location.href='template.html'">Learn More</button>
-                </div>
-
-                <!-- Personal Project 5: Website Design -->
+                <!-- Personal Project 4: Website Design -->
                 <div class="experience-card">
                     <div class="experience-info">
                         <h2 class="experience-brand">Website Design & Development</h2>
@@ -306,13 +286,30 @@
                             <i class="fas fa-globe fa-5x" style="color: #00f2fe;"></i>
                         </div>
                         <p class="experience-date">
+                            <em>2025</em>
+                        </p>
+                        <p class="experience-description">
+                            Designed and lead IA agent to create my portfolio website.
+                        </p>
+                    </div>
+                    <button class="card-btn" onclick="window.location.href='projects-personal.html#website-design'">Learn More</button>
+                </div>
+
+                <!-- Personal Project 5: Content Creation -->
+                <div class="experience-card">
+                    <div class="experience-info">
+                        <h2 class="experience-brand">Electronics Content Creation</h2>
+                        <div class="experience-image">
+                            <i class="fas fa-video fa-5x" style="color: #fa709a;"></i>
+                        </div>
+                        <p class="experience-date">
                             <em>2024</em>
                         </p>
                         <p class="experience-description">
-                            Designed and developed responsive websites using HTML, CSS, and JavaScript with modern UI/UX principles and best practices.
+                            Content creation of vertical videos on social media platforms about electronics facts.
                         </p>
                     </div>
-                    <button class="card-btn" onclick="window.location.href='template.html'">Learn More</button>
+                    <button class="card-btn" onclick="window.location.href='projects-personal.html#content-creation'">Learn More</button>
                 </div>
             </div>
         </section>
@@ -334,16 +331,10 @@
                 <!-- Example Internship Card -->
                 <div class="experience-card">
                     <div class="experience-info">
-                        <h2 class="experience-brand">Electronics Engineering Intern</h2>
+                        <h2 class="experience-brand">Hardware Evaluator Intern</h2>
                         <div class="experience-image">
-                            <i class="fas fa-building fa-5x" style="color: #667eea;"></i>
+                            <img src="images/serma_logo.png" alt="Serma Safety & Security" style="width: 100%; max-width: 120px; height: auto;">
                         </div>
-                        <p class="experience-date">
-                            <em>Company Name</em>
-                        </p>
-                        <p class="experience-date">
-                            <em>Summer 2024</em>
-                        </p>
                         <p class="experience-description">
                             Worked on circuit design, PCB layout, and testing of electronic systems. Gained hands-on experience with industry-standard tools.
                         </p>
@@ -354,16 +345,10 @@
                 <!-- Add more internship cards here -->
                 <div class="experience-card">
                     <div class="experience-info">
-                        <h2 class="experience-brand">Research Assistant</h2>
+                        <h2 class="experience-brand">R&D - HCI for Emission Microscopy</h2>
                         <div class="experience-image">
-                            <i class="fas fa-flask fa-5x" style="color: #764ba2;"></i>
+                            <img src="images/serma_logo.png" alt="Serma Safety & Security" style="width: 100%; max-width: 120px; height: auto;">
                         </div>
-                        <p class="experience-date">
-                            <em>University Lab</em>
-                        </p>
-                        <p class="experience-date">
-                            <em>2023-2024</em>
-                        </p>
                         <p class="experience-description">
                             Assisted in research projects related to embedded systems and sensor technology.
                         </p>
@@ -379,19 +364,19 @@
         <h1 id="top-page-contact">Get in touch</h1>
         <div class="flex justify-center gap-10">
             <!-- Email -->
-            <a href="mailto:your.email@example.com" class="contact-icon" aria-label="Email">
+            <a href="mailto:antoine.bi@proton.me" class="contact-icon" aria-label="Email">
                 <i class="fas fa-envelope fa-3x"></i>
                 <span>Email</span>
             </a>
 
             <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="contact-icon" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/antoine-binner-3102632b3/" target="_blank" class="contact-icon" aria-label="LinkedIn">
                 <i class="fab fa-linkedin fa-3x"></i>
                 <span>LinkedIn</span>
             </a>
 
             <!-- GitHub -->
-            <a href="https://github.com/your-username" target="_blank" class="contact-icon" aria-label="GitHub">
+            <a href="https://github.com/M4gico" target="_blank" class="contact-icon" aria-label="GitHub">
                 <i class="fab fa-github fa-3x"></i>
                 <span>GitHub</span>
             </a>
@@ -403,8 +388,8 @@
     <div class="footer-content">
       <div class="footer-links">
         <a href="#home">Home</a>
-        <a href="#academic">Academic Projects</a>
-        <a href="template.html">Personal Projects</a>
+        <a href="academic-projects.html">Academic Projects</a>
+        <a href="projects-personal.html">Personal Projects</a>
         <a href="#internship">Internship</a>
         <a href="#contact">Contact</a>
       </div>
@@ -412,63 +397,6 @@
       <p>Electronic Engineering Student Portfolio</p>
     </div>
   </footer>
-
-  <!-- Theme Switcher -->
-  <button class="theme-switcher" onclick="toggleThemeMenu()" aria-label="Change Theme">
-    <i class="fas fa-palette"></i>
-  </button>
-  
-  <div class="theme-menu" id="themeMenu">
-    <div class="theme-option" onclick="changeTheme('purple-indigo')">
-      <div class="theme-color-preview" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-      <span>Purple Indigo</span>
-    </div>
-    <div class="theme-option" onclick="changeTheme('blue-cyan')">
-      <div class="theme-color-preview" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
-      <span>Blue Cyan</span>
-    </div>
-    <div class="theme-option" onclick="changeTheme('green-teal')">
-      <div class="theme-color-preview" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
-      <span>Green Teal</span>
-    </div>
-    <div class="theme-option" onclick="changeTheme('orange-red')">
-      <div class="theme-color-preview" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
-      <span>Orange Sunset</span>
-    </div>
-    <div class="theme-option" onclick="changeTheme('dark-blue')">
-      <div class="theme-color-preview" style="background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);"></div>
-      <span>Dark Blue</span>
-    </div>
-    <hr style="border-color: rgba(255,255,255,0.2); margin: 0.5rem 0;">
-    <div class="theme-option" onclick="openColorAdjuster()" style="background: rgba(255, 255, 255, 0.1);">
-      <i class="fas fa-sliders-h" style="font-size: 1.5rem;"></i>
-      <span>Adjust Colors</span>
-    </div>
-  </div>
-
-  <!-- Color Adjuster Panel -->
-  <div class="color-adjuster" id="colorAdjuster">
-    <div class="adjuster-header">
-      <span>🎨 Dark Blue Adjuster</span>
-      <button class="close-adjuster" onclick="closeColorAdjuster()">✕</button>
-    </div>
-    
-    <div class="slider-container">
-      <div class="slider-label">
-        <span>Blue Lightness</span>
-        <span class="slider-value" id="lightnessValue">55%</span>
-      </div>
-      <input type="range" min="20" max="80" value="55" class="lightness-slider" id="lightnessSlider" oninput="updateLightness(this.value)">
-      <small style="color: rgba(255,255,255,0.6); font-size: 0.8rem;">← Darker | Lighter →</small>
-    </div>
-    
-    <div class="color-preview-box" id="colorPreview"></div>
-    
-    <div class="adjuster-buttons">
-      <button class="reset-btn" onclick="resetLightness()">Reset</button>
-      <button class="apply-btn" onclick="applyLightness()">Apply</button>
-    </div>
-  </div>
 
   <script src="js/script.js"></script>
   <script src="js/scroll_progress.js"></script>
