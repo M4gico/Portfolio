@@ -94,6 +94,9 @@ function changeTheme(themeName) {
     link.addEventListener('mouseenter', function() {
       this.style.color = theme.primary;
     });
+    link.addEventListener('mouseleave', function() {
+      this.style.color = '#ffffff';
+    });
   });
   
   // Update progress bar
