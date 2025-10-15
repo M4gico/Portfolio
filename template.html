@@ -263,63 +263,6 @@
     </div>
   </footer>
 
-  <!-- Theme Switcher -->
-  <button class="theme-switcher" onclick="toggleThemeMenu()" aria-label="Change Theme">
-    <i class="fas fa-palette"></i>
-  </button>
-  
-  <div class="theme-menu" id="themeMenu">
-    <div class="theme-option" onclick="changeTheme('purple-indigo')">
-      <div class="theme-color-preview" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-      <span>Purple Indigo</span>
-    </div>
-    <div class="theme-option" onclick="changeTheme('blue-cyan')">
-      <div class="theme-color-preview" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
-      <span>Blue Cyan</span>
-    </div>
-    <div class="theme-option" onclick="changeTheme('green-teal')">
-      <div class="theme-color-preview" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
-      <span>Green Teal</span>
-    </div>
-    <div class="theme-option" onclick="changeTheme('orange-red')">
-      <div class="theme-color-preview" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
-      <span>Orange Sunset</span>
-    </div>
-    <div class="theme-option" onclick="changeTheme('dark-blue')">
-      <div class="theme-color-preview" style="background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);"></div>
-      <span>Dark Blue</span>
-    </div>
-    <hr style="border-color: rgba(255,255,255,0.2); margin: 0.5rem 0;">
-    <div class="theme-option" onclick="openColorAdjuster()" style="background: rgba(255, 255, 255, 0.1);">
-      <i class="fas fa-sliders-h" style="font-size: 1.5rem;"></i>
-      <span>Adjust Colors</span>
-    </div>
-  </div>
-
-  <!-- Color Adjuster Panel -->
-  <div class="color-adjuster" id="colorAdjuster">
-    <div class="adjuster-header">
-      <span>🎨 Dark Blue Adjuster</span>
-      <button class="close-adjuster" onclick="closeColorAdjuster()">✕</button>
-    </div>
-    
-    <div class="slider-container">
-      <div class="slider-label">
-        <span>Blue Lightness</span>
-        <span class="slider-value" id="lightnessValue">55%</span>
-      </div>
-      <input type="range" min="20" max="80" value="55" class="lightness-slider" id="lightnessSlider" oninput="updateLightness(this.value)">
-      <small style="color: rgba(255,255,255,0.6); font-size: 0.8rem;">← Darker | Lighter →</small>
-    </div>
-    
-    <div class="color-preview-box" id="colorPreview"></div>
-    
-    <div class="adjuster-buttons">
-      <button class="reset-btn" onclick="resetLightness()">Reset</button>
-      <button class="apply-btn" onclick="applyLightness()">Apply</button>
-    </div>
-  </div>
-
   <script src="js/script.js"></script>
   <script src="js/scroll_progress.js"></script>
   <script src="js/theme_switcher.js"></script>
