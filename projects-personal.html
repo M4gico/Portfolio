@@ -150,8 +150,60 @@
             </ul>
           </div>
           <div class="project-image-container">
-            <img src="images/project-gamedev.jpg" alt="Video Game Development" class="project-image">
-            <p class="image-caption">Game development workspace and projects</p>
+            <div style="position: relative; max-width: 600px; margin: 0 auto; overflow: hidden; border-radius: 8px; background: #000;">
+              <div id="gamedev-carousel" style="display: flex; transition: transform 0.5s ease;">
+                <img src="images/SoapRiot/soapriot_1.png" alt="Soap Riot Game Screenshot 1" style="min-width: 100%; width: 100%; height: auto; display: block;">
+                <img src="images/SoapRiot/soapriot_2.png" alt="Soap Riot Game Screenshot 2" style="min-width: 100%; width: 100%; height: auto; display: block;">
+                <img src="images/SoapRiot/soapriot_3.png" alt="Soap Riot Game Screenshot 3" style="min-width: 100%; width: 100%; height: auto; display: block;">
+                <img src="images/SoapRiot/soapriot_4.png" alt="Soap Riot Game Screenshot 4" style="min-width: 100%; width: 100%; height: auto; display: block;">
+              </div>
+              <!-- Navigation buttons -->
+              <button onclick="moveCarousel(-1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px; z-index: 10;">&lt;</button>
+              <button onclick="moveCarousel(1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px; z-index: 10;">&gt;</button>
+              <!-- Indicator dots -->
+              <div style="text-align: center; padding: 10px; position: absolute; bottom: 0; width: 100%; z-index: 10;">
+                <span class="carousel-dot" onclick="goToSlide(0)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+                <span class="carousel-dot" onclick="goToSlide(1)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+                <span class="carousel-dot" onclick="goToSlide(2)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+                <span class="carousel-dot" onclick="goToSlide(3)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+              </div>
+            </div>
+            <p class="image-caption">Soap Riot - Game development screenshots</p>
+            <script>
+              let currentSlide = 0;
+              const totalSlides = 4;
+              
+              function moveCarousel(direction) {
+                currentSlide += direction;
+                if (currentSlide < 0) currentSlide = totalSlides - 1;
+                if (currentSlide >= totalSlides) currentSlide = 0;
+                updateCarousel();
+              }
+              
+              function goToSlide(index) {
+                currentSlide = index;
+                updateCarousel();
+              }
+              
+              function updateCarousel() {
+                const carousel = document.getElementById('gamedev-carousel');
+                carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Update dots
+                const dots = document.querySelectorAll('.carousel-dot');
+                dots.forEach((dot, index) => {
+                  dot.style.backgroundColor = index === currentSlide ? '#667eea' : '#bbb';
+                });
+              }
+              
+              // Auto-play carousel every 5 seconds
+              setInterval(() => {
+                moveCarousel(1);
+              }, 5000);
+              
+              // Initialize dots
+              updateCarousel();
+            </script>
           </div>
         </div>
       </div>
@@ -293,7 +345,18 @@
             </ul>
           </div>
           <div class="project-image-container">
-            <img src="images/project-content.jpg" alt="Electronics Content Creation" class="project-image">
+            <div style="display: flex; justify-content: center; align-items: center;">
+              <iframe 
+                width="315" 
+                height="560" 
+                src="https://www.youtube.com/embed/jgDI5zN33B8" 
+                title="Electronics Content Creation" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen
+                style="border-radius: 8px; max-width: 100%;">
+              </iframe>
+            </div>
             <p class="image-caption">Educational electronics content production</p>
           </div>
         </div>
