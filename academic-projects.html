@@ -100,17 +100,17 @@
       <!-- Mobile Menu -->
       <div class="mobile-menu hidden">
           <a href="index.html#home">Home</a>
-          <a href="projects-academic.html">Academic Projects</a>
+          <a href="index.html#internship">Internship Experience</a>
           <a href="projects-personal.html">Personal Projects</a>
-          <a href="index.html#internship">Internship</a>
+          <a href="academic-projects.html">Academic Projects</a>
           <a href="index.html#contact">Contact</a>
       </div>
       <!-- Desktop nav menu -->
       <ul class="desktop-menu">
           <li><a href="index.html#home">Home</a></li>
-          <li><a href="projects-academic.html">Academic Projects</a></li>
+          <li><a href="index.html#internship">Internship Experience</a></li>
           <li><a href="projects-personal.html">Personal Projects</a></li>
-          <li><a href="index.html#internship">Internship</a></li>
+          <li><a href="academic-projects.html">Academic Projects</a></li>
           <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
@@ -134,33 +134,120 @@
         <div class="project-content">
           <div class="project-text">
             <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 1rem;">
-              Third Semester
+              Sep to Dec 2024
+            </p>
+            
+            <h5 style="color: #a78bfa; font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid #667eea; padding-left: 0.75rem;">
+              Project Objective
+            </h5>
+            <p>
+              Designed and verified the sensor integration of a tracker robot for competitive sumo robot matches.
+              The goal is to push the opponent robot out of the ring using various sensors and control algorithms.
+            </p>
+            
+            <h5 style="color: #a78bfa; font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid #667eea; padding-left: 0.75rem;">
+              Project Development Process
+            </h5>
+            <p>
+              The main part of this project was design and choose which and how many sensors to use for the better detection of 
+              an opponent robot. <br>
+              For this, we created a <b>Design file</b> to explain our choices and the working principles of each sensor.
+              After the design phase, we created prototypes to test our designs and program in Arduino the converter of the
+              sensors signals to a measure unit value.<br>
+              In the same time, I also helped the treatment team to program the algorithm of the robot.<br>
+              After validating the prototypes, we created in our university lab the PCB and soldered all CMS components.<br>
+              Finally, we integrated the sensors into the sumo robot PCB and verified their functionality in real match conditions.
             </p>
             <p>
-              Designed and verified the sensor integration of a tracker robot for competitive sumo robot matches. This project involved comprehensive work on embedded systems, sensor fusion, and PCB design.
+              All choices and verifications were written in report documenting.
             </p>
-            <p>
-              The sumo robot project challenged us to create an autonomous robot capable of detecting opponents and pushing them out of a ring, requiring precise sensor integration and real-time decision-making algorithms.
-            </p>
-            <h3 class="project-subsection-title">Key Contributions</h3>
+
+            <h3 class="project-subsection-title">Improvements</h3>
             <ul class="project-list">
-              <li>Designed and integrated multiple sensors for opponent detection and edge detection</li>
-              <li>Verified sensor accuracy and calibration for optimal performance</li>
-              <li>Contributed to PCB design and layout for compact robot integration</li>
-              <li>Implemented sensor fusion algorithms for improved tracking</li>
-            </ul>
-            <h3 class="project-subsection-title">Technologies Used</h3>
-            <ul class="project-list">
-              <li>Embedded C programming for microcontroller control</li>
-              <li>IR sensors for opponent detection</li>
-              <li>Line sensors for ring edge detection</li>
-              <li>Motor control systems for movement</li>
-              <li>PCB design software for circuit layout</li>
+              <li>Better understanding on sensors integration</li>
+              <li>Working with a team (8 peoples)</li>
+              <li>PCB designs and soldering CMS components</li>
+              <li>Low level programming for sensor integration and algorithms</li>
             </ul>
           </div>
           <div class="project-image-container">
-            <img src="images/sumo-robot-detail.jpg" alt="Sumo Robot Project" class="project-image">
-            <p class="image-caption">Sumo robot with integrated sensors and PCB</p>
+            <div style="position: relative; max-width: 600px; margin: 0 auto; overflow: hidden; border-radius: 8px; background: #000;">
+              <div id="sumorobot-carousel" style="display: flex; transition: transform 0.5s ease;">
+                <img src="images/RobotSumo/robot_sumo1.jpg" alt="Sumo Robot Image 1" style="min-width: 100%; width: 100%; height: auto; display: block; object-fit: contain;">
+                <video controls style="min-width: 100%; width: 100%; height: auto; display: block; object-fit: contain;">
+                  <source src="videos/robot_sumo.MOV" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <img src="images/RobotSumo/robot_sumo2.png" alt="Sumo Robot Image 2" style="min-width: 100%; width: 100%; height: auto; display: block; object-fit: contain;">
+                <img src="images/RobotSumo/robot_sumo3.png" alt="Sumo Robot Image 3" style="min-width: 100%; width: 100%; height: auto; display: block; object-fit: contain;">
+              </div>
+              <!-- Navigation buttons -->
+              <button onclick="moveSumoRobotCarousel(-1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px; z-index: 10;">&lt;</button>
+              <button onclick="moveSumoRobotCarousel(1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px; z-index: 10;">&gt;</button>
+              <!-- Indicator dots -->
+              <div style="text-align: center; padding: 10px; position: absolute; bottom: 0; width: 100%; z-index: 10;">
+                <span class="sumorobot-dot" onclick="goToSumoRobotSlide(0)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+                <span class="sumorobot-dot" onclick="goToSumoRobotSlide(1)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+                <span class="sumorobot-dot" onclick="goToSumoRobotSlide(2)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+                <span class="sumorobot-dot" onclick="goToSumoRobotSlide(3)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+              </div>
+            </div>
+            <p class="image-caption" id="sumorobot-caption" style="margin-top: 0.5rem;">Sumo robot with integrated sensors and PCB</p>
+            <script>
+              let currentSumoRobotSlide = 0;
+              const totalSumoRobotSlides = 4;
+              const sumoVideos = document.querySelectorAll('#sumorobot-carousel video');
+              
+              // Captions for each slide
+              const sumoRobotCaptions = [
+                "Prototype of the sumo robot sensors",
+                "Testing sumo robot chase in action",
+                "Electric schematic of the sumo robot on KiCad 1/2",
+                "Electric schematic of the sumo robot on KiCad 2/2"
+              ];
+              
+              function moveSumoRobotCarousel(direction) {
+                // Pause current video if it's a video slide
+                if (currentSumoRobotSlide === 1 && sumoVideos.length > 0) {
+                  sumoVideos[0].pause();
+                }
+                
+                currentSumoRobotSlide += direction;
+                if (currentSumoRobotSlide < 0) currentSumoRobotSlide = totalSumoRobotSlides - 1;
+                if (currentSumoRobotSlide >= totalSumoRobotSlides) currentSumoRobotSlide = 0;
+                updateSumoRobotCarousel();
+              }
+              
+              function goToSumoRobotSlide(index) {
+                // Pause current video if it's a video slide
+                if (currentSumoRobotSlide === 1 && sumoVideos.length > 0) {
+                  sumoVideos[0].pause();
+                }
+                
+                currentSumoRobotSlide = index;
+                updateSumoRobotCarousel();
+              }
+              
+              function updateSumoRobotCarousel() {
+                const carousel = document.getElementById('sumorobot-carousel');
+                carousel.style.transform = `translateX(-${currentSumoRobotSlide * 100}%)`;
+                
+                // Update dots
+                const dots = document.querySelectorAll('.sumorobot-dot');
+                dots.forEach((dot, index) => {
+                  dot.style.backgroundColor = index === currentSumoRobotSlide ? '#667eea' : '#bbb';
+                });
+                
+                // Update caption
+                const captionElement = document.getElementById('sumorobot-caption');
+                if (captionElement) {
+                  captionElement.textContent = sumoRobotCaptions[currentSumoRobotSlide];
+                }
+              }
+              
+              // Initialize dots and caption
+              updateSumoRobotCarousel();
+            </script>
           </div>
         </div>
       </div>
@@ -175,37 +262,37 @@
           </div>
           <h2 class="project-section-title">Propeller Kart</h2>
         </div>
-        <div class="project-content">
+        <div class="project-content reverse">
           <div class="project-text">
-            <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 1rem;">
-              Second Semester
+            <p class="experience-date" style="color:  rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 1rem;">
+              Jan to Jun 2024
             </p>
+            <h5 style="color: #a78bfa; font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid #667eea; padding-left: 0.75rem;">
+              Project Objective
+            </h5>
             <p>
-              Designed and verified the data acquisition system for a propeller-driven kart, combined with an infrared (IR) remote control system. This innovative project explored alternative propulsion methods and wireless control systems.
+              Designed and verified the action part of the propeller-driven kart and the sensor part of the accompanying infrared (IR) remote control.
+              The two systems communicate using the NEC protocol to communicate wirelessly.
             </p>
+            <h5 style="color: #a78bfa; font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid #667eea; padding-left: 0.75rem;">
+              Project Development Process
+            </h5>
             <p>
-              The propeller kart project required careful integration of power electronics, control systems, and wireless communication to create a functional and safe vehicle controlled remotely via IR signals.
+              My role in this project was focused on both the kart's hardware and the remote's software.
+              I was responsible for the "action" part of the kart, which included integrating the propeller motor and the buzzer.<br> 
+              I also handled the "sensor" part, which involved implementing the IR communication receiver. <br>
+              A significant part of my contribution was developing the entire Arduino code for the remote control's microprocessor.
             </p>
-            <h3 class="project-subsection-title">Project Highlights</h3>
+            <h3 class="project-subsection-title-reverse">Improvements</h3>
             <ul class="project-list">
-              <li>Designed data acquisition system for monitoring kart performance</li>
-              <li>Implemented IR remote control for wireless operation</li>
-              <li>Contributed to PCB design for power distribution and control</li>
-              <li>Verified system safety and performance under various conditions</li>
-              <li>Integrated propeller motor control with remote commands</li>
-            </ul>
-            <h3 class="project-subsection-title">Technical Implementation</h3>
-            <ul class="project-list">
-              <li>IR receiver and transmitter circuits for remote control</li>
-              <li>Motor speed control using PWM signals</li>
-              <li>Data acquisition sensors for speed and performance monitoring</li>
-              <li>Power management circuitry for safe operation</li>
-              <li>PCB design and implementation for compact integration</li>
+              <li>Understanding of IR communication and the NEC protocol</li>
+              <li>Low level development for a microprocessor (Arduino)</li>
+              <li>Integrating hardware components with a custom-coded remote control</li>
             </ul>
           </div>
           <div class="project-image-container">
             <img src="images/propeller-kart-detail.jpg" alt="Propeller Kart Project" class="project-image">
-            <p class="image-caption">Propeller kart with IR control system and PCB</p>
+            <p class="image-caption" style="color: rgba(255, 255, 255, 0.7);">Propeller kart with IR control system and PCB</p>
           </div>
         </div>
       </div>
@@ -225,9 +312,9 @@
     <div class="footer-content">
       <div class="footer-links">
         <a href="index.html#home">Home</a>
-        <a href="projects-academic.html">Academic Projects</a>
+        <a href="index.html#internship">Internship Experience</a>
         <a href="projects-personal.html">Personal Projects</a>
-        <a href="index.html#internship">Internship</a>
+        <a href="academic-projects.html">Academic Projects</a>
         <a href="index.html#contact">Contact</a>
       </div>
       <p>© 2025 Antoine BINNER</p>

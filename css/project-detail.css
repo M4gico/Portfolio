@@ -5,8 +5,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 40vh;
-  padding: 3rem 2rem;
+  min-height: 20vh;
+  padding: 1.5rem 2rem;
   text-align: center;
 }
 
@@ -80,6 +80,14 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: #667eea;
+  font-family: 'Montserrat', sans-serif;
+  margin: 2rem 0 1rem 0;
+}
+
+.project-subsection-title-reverse {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(85, 104, 190);
   font-family: 'Montserrat', sans-serif;
   margin: 2rem 0 1rem 0;
 }

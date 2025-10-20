@@ -131,17 +131,17 @@
       <!-- Mobile Menu -->
       <div class="mobile-menu hidden">
           <a href="#home">Home</a>
-          <a href="academic-projects.html">Academic Projects</a>
+          <a href="#internship">Internship Experience</a>
           <a href="projects-personal.html">Personal Projects</a>
-          <a href="#internship">Internship</a>
+          <a href="academic-projects.html">Academic Projects</a>
           <a href="#contact">Contact</a>
       </div>
       <!-- Desktop nav menu -->
       <ul class="desktop-menu">
           <li><a href="#home">Home</a></li>
-          <li><a href="academic-projects.html">Academic Projects</a></li>
+          <li><a href="#internship">Internship Experience</a></li>
           <li><a href="projects-personal.html">Personal Projects</a></li>
-          <li><a href="#internship">Internship</a></li>
+          <li><a href="academic-projects.html">Academic Projects</a></li>
           <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -163,52 +163,55 @@
         </a>
     </section>
 
-    <!-- Academic Projects Section -->
-    <section id="academic" class="projects section-darker">
+    <!-- Internship Section -->
+    <section id="internship" class="projects section-darker">
         <div class="header-container">
-            <div class="title-container">
-                <h1 id="top-page-academic">Academic Projects</h1>
-                <div class="btns">
-                    <button id="academic-pre-btn" class="pre-btn"><img src="images/arrow.svg" alt="Previous"></button>
-                    <button id="academic-nxt-btn" class="nxt-btn"><img src="images/arrow.svg" alt="Next"></button>
+            <div class="title-container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <div style="display: flex; align-items: center; gap: 20px;">
+                    <h1 id="top-page-internship">Internship Experience</h1>
+                    <div class="btns">
+                        <button id="internship-pre-btn" class="pre-btn"><img src="images/arrow.svg" alt="Previous"></button>
+                        <button id="internship-nxt-btn" class="nxt-btn"><img src="images/arrow.svg" alt="Next"></button>
+                    </div>
+                </div>
+                <!-- Company Info on the right -->
+                <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
+                    <img src="images/serma_logo.png" alt="Serma Safety & Security" style="max-width: 150px; height: auto;">
+                    <p style="font-size: 1.1em; color: #667eea; font-weight: 600; font-family: 'Montserrat', sans-serif; margin: 0;">Jan 2024 - Jan 2025</p>
                 </div>
             </div>
         </div>
+
         <section class="experience">
-            <div id="academic-container" class="experience-container">
-                <!-- Example Academic Project Card -->
+            <div id="internship-container" class="experience-container">
+                <!-- Example Internship Card -->
                 <div class="experience-card">
                     <div class="experience-info">
-                        <h2 class="experience-brand">Sumo Robot</h2>
+                        <h2 class="experience-brand">Cybersecurity Hardware Evaluation</h2>
                         <div class="experience-image" style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; margin: 0 auto;">
-                            <img src="images/robot_sumo.png" alt="Robot Sumo" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="images/hardware_evaluator.jpg" alt="Hardware Evaluation" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <p class="experience-date">
-                            <em>Third Semester</em>
-                        </p>
                         <p class="experience-description">
-                            Designed and verified the sensor integration of a tracker robot and contributed to the creation of the PCB card.
+                            Trying to disturb several hardware mechanisms using different injections (Laser, EM, BBI, Glitch).<br>
+                            Gained experience in semi-conductor physics, microcontroller architectures and signal analysis.
                         </p>
                     </div>
-                    <button class="card-btn" onclick="window.location.href='academic-projects.html#sumo-robot'">Learn More</button>
+                    <button class="card-btn">Learn More</button>
                 </div>
 
-                <!-- Add more academic project cards here -->
+                <!-- Add more internship cards here -->
                 <div class="experience-card">
                     <div class="experience-info">
-                        <h2 class="experience-brand">Propeller Kart</h2>
+                        <h2 class="experience-brand">R&D - Emission Microscopy</h2>
                         <div class="experience-image" style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; margin: 0 auto;">
-                            <img src="images/kart_a_helice.png" alt="Propeller Kart" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="images/emmi_chip.png" alt="EMMI Chip" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <p class="experience-date">
-                            <em>Second Semester</em>
-                        </p>
                         <p class="experience-description">
-                           Designed and verified the acquisition and action system of a propeller kart combined with an IR remote to control it.<br>
-                           Contribued to the PCB design and implementation.
+                            Developed an HCI with PyQt to control an Emission Microscopy setup to map the emissions of a chip. <br>
+                            Gained experience in OOP programming with Python, semi-conductor physics, and microcontroller architectures.
                         </p>
                     </div>
-                    <button class="card-btn" onclick="window.location.href='academic-projects.html#propeller-kart'">Learn More</button>
+                    <button class="card-btn">Learn More</button>
                 </div>
             </div>
         </section>
@@ -315,55 +318,52 @@
         </section>
     </section>
 
-    <!-- Internship Section -->
-    <section id="internship" class="projects section-darker">
+    <!-- Academic Projects Section -->
+    <section id="academic" class="projects section-darker">
         <div class="header-container">
-            <div class="title-container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-                <div style="display: flex; align-items: center; gap: 20px;">
-                    <h1 id="top-page-internship">Internship Experience</h1>
-                    <div class="btns">
-                        <button id="internship-pre-btn" class="pre-btn"><img src="images/arrow.svg" alt="Previous"></button>
-                        <button id="internship-nxt-btn" class="nxt-btn"><img src="images/arrow.svg" alt="Next"></button>
-                    </div>
-                </div>
-                <!-- Company Info on the right -->
-                <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
-                    <img src="images/serma_logo.png" alt="Serma Safety & Security" style="max-width: 150px; height: auto;">
-                    <p style="font-size: 1.1em; color: #667eea; font-weight: 600; font-family: 'Montserrat', sans-serif; margin: 0;">Jan 2024 - Jan 2025</p>
+            <div class="title-container">
+                <h1 id="top-page-academic">Academic Projects</h1>
+                <div class="btns">
+                    <button id="academic-pre-btn" class="pre-btn"><img src="images/arrow.svg" alt="Previous"></button>
+                    <button id="academic-nxt-btn" class="nxt-btn"><img src="images/arrow.svg" alt="Next"></button>
                 </div>
             </div>
         </div>
-
         <section class="experience">
-            <div id="internship-container" class="experience-container">
-                <!-- Example Internship Card -->
+            <div id="academic-container" class="experience-container">
+                <!-- Example Academic Project Card -->
                 <div class="experience-card">
                     <div class="experience-info">
-                        <h2 class="experience-brand">Cybersecurity Hardware Evaluation</h2>
+                        <h2 class="experience-brand">Sumo Robot</h2>
                         <div class="experience-image" style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; margin: 0 auto;">
-                            <img src="images/hardware_evaluator.jpg" alt="Hardware Evaluation" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="images/robot_sumo.png" alt="Robot Sumo" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
+                        <p class="experience-date">
+                            <em>Third Semester</em>
+                        </p>
                         <p class="experience-description">
-                            Trying to disturb several hardware mechanisms using different injections (Laser, EM, BBI, Glitch).<br>
-                            Gained experience in semi-conductor physics, microcontroller architectures and signal analysis.
+                            Designed and verified the sensor integration of a tracker robot and contributed to the creation of the PCB card.
                         </p>
                     </div>
-                    <button class="card-btn">Learn More</button>
+                    <button class="card-btn" onclick="window.location.href='academic-projects.html#sumo-robot'">Learn More</button>
                 </div>
 
-                <!-- Add more internship cards here -->
+                <!-- Add more academic project cards here -->
                 <div class="experience-card">
                     <div class="experience-info">
-                        <h2 class="experience-brand">R&D - Emission Microscopy</h2>
+                        <h2 class="experience-brand">Propeller Kart</h2>
                         <div class="experience-image" style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; margin: 0 auto;">
-                            <img src="images/emmi_chip.png" alt="EMMI Chip" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="images/kart_a_helice.png" alt="Propeller Kart" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
+                        <p class="experience-date">
+                            <em>Second Semester</em>
+                        </p>
                         <p class="experience-description">
-                            Developed an HCI with PyQt to control an Emission Microscopy setup to map the emissions of a chip. <br>
-                            Gained experience in OOP programming with Python, semi-conductor physics, and microcontroller architectures.
+                           Designed and verified the acquisition and action system of a propeller kart combined with an IR remote to control it.<br>
+                           Contribued to the PCB design and implementation.
                         </p>
                     </div>
-                    <button class="card-btn">Learn More</button>
+                    <button class="card-btn" onclick="window.location.href='academic-projects.html#propeller-kart'">Learn More</button>
                 </div>
             </div>
         </section>
@@ -371,7 +371,6 @@
 
     <!-- Contact Section -->
     <section id="contact" class="bg-custom text-white p-5 py-0 text-center section-lighter">
-        <h1 id="top-page-contact">Get in touch</h1>
         <div class="flex justify-center gap-10">
             <!-- Email -->
             <a href="mailto:antoine.bi@proton.me" class="contact-icon" aria-label="Email">
@@ -398,13 +397,11 @@
     <div class="footer-content">
       <div class="footer-links">
         <a href="#home">Home</a>
-        <a href="academic-projects.html">Academic Projects</a>
+        <a href="#internship">Internship Experience</a>
         <a href="projects-personal.html">Personal Projects</a>
-        <a href="#internship">Internship</a>
+        <a href="academic-projects.html">Academic Projects</a>
         <a href="#contact">Contact</a>
       </div>
-      <p>© 2025 Antoine BINNER</p>
-      <p>Electronic Engineering Student Portfolio</p>
     </div>
   </footer>
 
