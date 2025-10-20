@@ -89,7 +89,12 @@
   display: flex;
   flex-direction: row;
   gap: 3rem;
-  align-items: flex-start;
+  align-items: center;
+}
+
+/* Reversed layout for alternating sections */
+.project-content.reverse {
+  flex-direction: row-reverse;
 }
 
 .project-text {

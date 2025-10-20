@@ -130,80 +130,153 @@
           </div>
           <h2 class="project-section-title">Video Game Development</h2>
         </div>
+        
+        <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 2rem; text-align: center;">
+          2024-Ongoing
+        </p>
+        <p style="color: rgba(255, 255, 255, 0.9); text-align: center; margin-bottom: 3rem; font-size: 1.1rem; padding: 0 5%;">
+          Created multiple video games using Unity during my free time. All my projects related to this topic are shown below.
+        </p>
+
+        <!-- Subsection 1: Development of a videogame last 10 months -->
+        <h2 class="project-subsection-title" style="text-align: center; font-size: 2rem; margin-top: 3rem; margin-bottom: 2rem;">Development of a videogame last 10 months</h2>
         <div class="project-content">
           <div class="project-text">
-            <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 1rem;">
-              2023-2024
+            <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 2rem; text-align: left;">
+              2025-Ongoing
             </p>
             <p>
-              Created multiple video games using game engines and programming, combining creativity with technical skills in game design and development.
+              Over the last 10 months, I developed with a high-school friend a 2D videogame in C# on the game engine Unity. Videos of some prototypes are shown next to.<br>
+              During these months, I made several improvements shown below:
             </p>
-            <p>
-              This ongoing project showcases my ability to blend artistic vision with technical implementation, creating engaging interactive experiences.
-            </p>
-            <h3 class="project-subsection-title">Technologies & Skills</h3>
+
             <ul class="project-list">
-              <li>Unity game engine for 2D and 3D game development</li>
-              <li>C# programming for game logic and mechanics</li>
-              <li>Game design principles including level design and player progression</li>
-              <li>Asset creation and integration</li>
+              <li>Learn the basics of C# with the practice in addition of a <a href="https://www.udemy.com/course/ultimate-csharp-masterclass/" target="_blank" rel="noopener noreferrer" style="color: #0077cc; font-style: italic;">Udemy course</a> followed on the side</li>
+              <li>Developed a finite state machine in C# for each different player state</li>
+              <li>Organized all folders and files for better project structure and lisibility</li>
+              <li>Improvements of rigor. Make a call with my friend each Saturdays to show progress on each side and make a to-do list for the next week.</li>
             </ul>
+
+            <p>
+              The goal of this project is to create a video game with a life time of 5 hours minimum with. <br>
+              The expectation is to release a demo version in the start of 2026 and the completed game in 2 years.
+            </p>
+
           </div>
           <div class="project-image-container">
             <div style="position: relative; max-width: 600px; margin: 0 auto; overflow: hidden; border-radius: 8px; background: #000;">
               <div id="gamedev-carousel" style="display: flex; transition: transform 0.5s ease;">
-                <img src="images/SoapRiot/soapriot_1.png" alt="Soap Riot Game Screenshot 1" style="min-width: 100%; width: 100%; height: auto; display: block;">
-                <img src="images/SoapRiot/soapriot_2.png" alt="Soap Riot Game Screenshot 2" style="min-width: 100%; width: 100%; height: auto; display: block;">
-                <img src="images/SoapRiot/soapriot_3.png" alt="Soap Riot Game Screenshot 3" style="min-width: 100%; width: 100%; height: auto; display: block;">
-                <img src="images/SoapRiot/soapriot_4.png" alt="Soap Riot Game Screenshot 4" style="min-width: 100%; width: 100%; height: auto; display: block;">
+                <video controls style="min-width: 100%; width: 100%; height: auto; display: block;">
+                  <source src="videos/Gameplay_TOM_1.mov" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <video controls style="min-width: 100%; width: 100%; height: auto; display: block;">
+                  <source src="videos/Gameplay_TOM_2.mov" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <video controls style="min-width: 100%; width: 100%; height: auto; display: block;">
+                  <source src="videos/Gameplay_TOM_3.mov" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
               </div>
               <!-- Navigation buttons -->
-              <button onclick="moveCarousel(-1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px; z-index: 10;">&lt;</button>
-              <button onclick="moveCarousel(1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px; z-index: 10;">&gt;</button>
+              <button onclick="moveVideoCarousel(-1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px; z-index: 10;">&lt;</button>
+              <button onclick="moveVideoCarousel(1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px; z-index: 10;">&gt;</button>
               <!-- Indicator dots -->
               <div style="text-align: center; padding: 10px; position: absolute; bottom: 0; width: 100%; z-index: 10;">
-                <span class="carousel-dot" onclick="goToSlide(0)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
-                <span class="carousel-dot" onclick="goToSlide(1)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
-                <span class="carousel-dot" onclick="goToSlide(2)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
-                <span class="carousel-dot" onclick="goToSlide(3)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+                <span class="carousel-dot" onclick="goToVideoSlide(0)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+                <span class="carousel-dot" onclick="goToVideoSlide(1)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+                <span class="carousel-dot" onclick="goToVideoSlide(2)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
               </div>
             </div>
-            <p class="image-caption">Soap Riot - Game development screenshots</p>
+            <p class="image-caption">Gameplay video prototypes</p>
             <script>
-              let currentSlide = 0;
-              const totalSlides = 4;
+              let currentVideoSlide = 0;
+              const totalVideoSlides = 3;
+              const videos = document.querySelectorAll('#gamedev-carousel video');
               
-              function moveCarousel(direction) {
-                currentSlide += direction;
-                if (currentSlide < 0) currentSlide = totalSlides - 1;
-                if (currentSlide >= totalSlides) currentSlide = 0;
-                updateCarousel();
+              function moveVideoCarousel(direction) {
+                // Pause current video
+                videos[currentVideoSlide].pause();
+                
+                currentVideoSlide += direction;
+                if (currentVideoSlide < 0) currentVideoSlide = totalVideoSlides - 1;
+                if (currentVideoSlide >= totalVideoSlides) currentVideoSlide = 0;
+                updateVideoCarousel();
               }
               
-              function goToSlide(index) {
-                currentSlide = index;
-                updateCarousel();
+              function goToVideoSlide(index) {
+                // Pause current video
+                videos[currentVideoSlide].pause();
+                
+                currentVideoSlide = index;
+                updateVideoCarousel();
               }
               
-              function updateCarousel() {
+              function updateVideoCarousel() {
                 const carousel = document.getElementById('gamedev-carousel');
-                carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+                carousel.style.transform = `translateX(-${currentVideoSlide * 100}%)`;
                 
                 // Update dots
                 const dots = document.querySelectorAll('.carousel-dot');
                 dots.forEach((dot, index) => {
-                  dot.style.backgroundColor = index === currentSlide ? '#667eea' : '#bbb';
+                  dot.style.backgroundColor = index === currentVideoSlide ? '#667eea' : '#bbb';
                 });
               }
               
-              // Auto-play carousel every 5 seconds
-              setInterval(() => {
-                moveCarousel(1);
-              }, 5000);
-              
               // Initialize dots
-              updateCarousel();
+              updateVideoCarousel();
             </script>
+          </div>
+        </div>
+
+        <!-- Subsection 2: Game Jams -->
+        <h2 class="project-subsection-title" style="text-align: center; font-size: 2rem; margin-top: 4rem; margin-bottom: 2rem;">Game Jams</h2>
+
+        <!-- Soap Riot -->
+        <h3 class="project-subsection-title" style="font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1.5rem; padding: 0 5%;">Soap Riot</h3>
+        <div class="project-content reverse">
+          <div class="project-text">
+                    <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 2rem; text-align: left;">
+              Jan 2025
+            </p>
+            <p>
+              Created a video game on the theme <i>"bubble"</i> in 48 hours for the <b>Global Game Jam 2025</b> at Bordeaux.
+            </p>
+            <ul class="project-list">
+              <li>Learn to use git for version control and collaboration</li>
+              <li>Created during a time-constrained game jam</li>
+              <li>Working with people you don't know</li>
+            </ul>
+          </div>
+          <div class="project-image-container">
+            <img src="images/SoapRiot/soapriot_1.png" alt="Soap Riot Game" class="project-image">
+            <p class="image-caption">
+              <a href="https://keurmii.itch.io/soap-riot" target="_blank" rel="noopener noreferrer" style="color: #0077cc;">Soap Riot</a> - Available on itch.io
+            </p>
+          </div>
+        </div>
+
+        <!-- Molec Adventures -->
+        <h3 class="project-subsection-title" style="font-size: 1.5rem; margin-top: 3rem; margin-bottom: 1.5rem; padding: 0 5%;">Molec Adventures</h3>
+        <div class="project-content">
+          <div class="project-text">
+            <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 2rem; text-align: left;">
+              Mar 2025
+            </p>
+            <p>
+              Created a video game on the theme of a <i>thesis</i> that explains particle accelerations between mirrors in 48 hours for the <b>Scientific Game Jam 2025</b> at Strasbourg.
+            </p>
+            <ul class="project-list">
+              <li>Work with someone despite a lack of rapport</li>
+              <li>Monitors everyone's progress in the game to reach the goal</li>
+              <li>Consolidate my knowledge on git</li>
+              <li>Talk with professionals in the video game industry</li>
+            </ul>
+          </div>
+          <div class="project-image-container">
+            <img src="images/molec-adventures-placeholder.jpg" alt="Molec Adventures Game" class="project-image">
+            <p class="image-caption">Molec Adventures - Educational game jam project</p>
           </div>
         </div>
       </div>
@@ -218,7 +291,7 @@
           </div>
           <h2 class="project-section-title">PyQt Application interacting with OS</h2>
         </div>
-        <div class="project-content">
+        <div class="project-content reverse">
           <div class="project-text">
             <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 1rem;">
               2024
@@ -290,7 +363,7 @@
           </div>
           <h2 class="project-section-title">Design of a Game Controller</h2>
         </div>
-        <div class="project-content">
+        <div class="project-content reverse">
           <div class="project-text">
             <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 1rem;">
               2024
