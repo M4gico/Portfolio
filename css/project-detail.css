@@ -132,6 +132,11 @@
   line-height: 1.2;
 }
 
+/* Darker bullet points for light background sections */
+.section-lighter .project-list li::before {
+  color: #4338ca;
+}
+
 /* Project Images */
 .project-image-container {
   display: flex;

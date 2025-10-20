@@ -143,7 +143,7 @@
         <div class="project-content">
           <div class="project-text">
             <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 2rem; text-align: left;">
-              2025-Ongoing
+              Dec 2024-Ongoing
             </p>
             <p>
               Over the last 10 months, I developed with a high-school friend a 2D videogame in C# on the game engine Unity. Videos of some prototypes are shown next to.<br>
@@ -250,10 +250,62 @@
             </ul>
           </div>
           <div class="project-image-container">
-            <img src="images/SoapRiot/soapriot_1.png" alt="Soap Riot Game" class="project-image">
+            <div style="position: relative; max-width: 600px; margin: 0 auto; overflow: hidden; border-radius: 8px; background: #000;">
+              <div id="soapriot-carousel" style="display: flex; transition: transform 0.5s ease;">
+                <img src="images/SoapRiot/soapriot_1.png" alt="Soap Riot Screenshot 1" style="min-width: 100%; width: 100%; height: auto; display: block;">
+                <img src="images/SoapRiot/soapriot_2.png" alt="Soap Riot Screenshot 2" style="min-width: 100%; width: 100%; height: auto; display: block;">
+                <img src="images/SoapRiot/soapriot_3.png" alt="Soap Riot Screenshot 3" style="min-width: 100%; width: 100%; height: auto; display: block;">
+                <img src="images/SoapRiot/soapriot_4.png" alt="Soap Riot Screenshot 4" style="min-width: 100%; width: 100%; height: auto; display: block;">
+              </div>
+              <!-- Navigation buttons -->
+              <button onclick="moveSoapRiotCarousel(-1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px; z-index: 10;">&lt;</button>
+              <button onclick="moveSoapRiotCarousel(1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px; z-index: 10;">&gt;</button>
+              <!-- Indicator dots -->
+              <div style="text-align: center; padding: 10px; position: absolute; bottom: 0; width: 100%; z-index: 10;">
+                <span class="soapriot-dot" onclick="goToSoapRiotSlide(0)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+                <span class="soapriot-dot" onclick="goToSoapRiotSlide(1)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+                <span class="soapriot-dot" onclick="goToSoapRiotSlide(2)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+                <span class="soapriot-dot" onclick="goToSoapRiotSlide(3)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+              </div>
+            </div>
             <p class="image-caption">
-              <a href="https://keurmii.itch.io/soap-riot" target="_blank" rel="noopener noreferrer" style="color: #0077cc;">Soap Riot</a> - Available on itch.io
+              Screenshots of <a href="https://keurmii.itch.io/soap-riot" target="_blank" rel="noopener noreferrer" style="color: #0077cc;">Soap Riot</a>
             </p>
+            <script>
+              let currentSoapRiotSlide = 0;
+              const totalSoapRiotSlides = 4;
+              
+              function moveSoapRiotCarousel(direction) {
+                currentSoapRiotSlide += direction;
+                if (currentSoapRiotSlide < 0) currentSoapRiotSlide = totalSoapRiotSlides - 1;
+                if (currentSoapRiotSlide >= totalSoapRiotSlides) currentSoapRiotSlide = 0;
+                updateSoapRiotCarousel();
+              }
+              
+              function goToSoapRiotSlide(index) {
+                currentSoapRiotSlide = index;
+                updateSoapRiotCarousel();
+              }
+              
+              function updateSoapRiotCarousel() {
+                const carousel = document.getElementById('soapriot-carousel');
+                carousel.style.transform = `translateX(-${currentSoapRiotSlide * 100}%)`;
+                
+                // Update dots
+                const dots = document.querySelectorAll('.soapriot-dot');
+                dots.forEach((dot, index) => {
+                  dot.style.backgroundColor = index === currentSoapRiotSlide ? '#667eea' : '#bbb';
+                });
+              }
+              
+              // Auto-play carousel every 4 seconds
+              setInterval(() => {
+                moveSoapRiotCarousel(1);
+              }, 4000);
+              
+              // Initialize dots
+              updateSoapRiotCarousel();
+            </script>
           </div>
         </div>
 
@@ -294,20 +346,26 @@
         <div class="project-content reverse">
           <div class="project-text">
             <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 1rem;">
-              2024
+              2025
             </p>
             <p>
-              Developed a desktop application using PyQt framework that interacts with the operating system for system monitoring and automation tasks.
+              Developed a desktop application using PyQt 
+              framework to open several applications .exe 
+              into the screens detected by the os.<br>
+              All the code of the application is hosted on <a href="https://github.com/M4gico/TidyUp" target="_blank" rel="noopener noreferrer" style="color: #004c82; font-style: italic;">GitHub</a>
             </p>
             <p>
-              This project demonstrates my proficiency in Python GUI development and system-level programming, creating practical tools for everyday use.
+              <b>How it works:</b><br>
+              The user select all .exe applications that will be added in the scroll view
+              at the left of the application.<br>
+              Then, the user can add its applications into 
+              screens that has been detected by the os. <br>
+              Finally, clicking on "Launch applications" to launch them in the selected screens.
             </p>
-            <h3 class="project-subsection-title">Technical Implementation</h3>
             <ul class="project-list">
-              <li>PyQt5 framework for cross-platform GUI development</li>
-              <li>OS-level API integration for system monitoring</li>
+              <li>PyQt5 framework for building the GUI</li>
+              <li>Interact with the OS with libraries (os, win32api)</li>
               <li>Automated task scheduling and execution</li>
-              <li>Real-time data visualization and reporting</li>
             </ul>
           </div>
           <div class="project-image-container">
@@ -330,25 +388,40 @@
         <div class="project-content">
           <div class="project-text">
             <p class="experience-date" style="color: rgba(255, 255, 255, 0.7); font-style: italic; margin-bottom: 1rem;">
-              2024
+              2025
             </p>
             <p>
-              Designed and developed responsive websites using HTML, CSS, and JavaScript with modern UI/UX principles and best practices.
+              Lead an IA agent directly integrated in VS Code IDE to develop <b>this portfolio</b> website.<br>
             </p>
             <p>
-              This portfolio itself is a testament to this project, showcasing my ability to create clean, modern, and functional web interfaces.
+              This project allowed me to discover all the advantages and disadvantages
+              of using only an AI agent to create a code project.
             </p>
-            <h3 class="project-subsection-title">Web Development Skills</h3>
-            <ul class="project-list">
-              <li>HTML5, CSS3, and JavaScript for modern web development</li>
-              <li>Responsive design for mobile, tablet, and desktop devices</li>
-              <li>Modern UI/UX principles and accessibility standards</li>
-              <li>Performance optimization and SEO best practices</li>
-            </ul>
-          </div>
-          <div class="project-image-container">
-            <img src="images/project-website.jpg" alt="Website Design & Development" class="project-image">
-            <p class="image-caption">Responsive website design and development</p>
+            
+            <h3 class="project-subsection-title">Conclusion of fully using an AI agent</h3>
+            
+            <div style="display: flex; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;">
+              <!-- Advantages Column -->
+              <div style="flex: 1; min-width: 280px;">
+                <h4 style="color: #4ade80; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.75rem;">✓ Advantages</h4>
+                <ul class="project-list">
+                  <li>Really fast to prototyping little ideas</li>
+                  <li>Automate repetitive tasks and little changements</li>
+                  <li>Fast to make little projects</li>
+                </ul>
+              </div>
+
+              <!-- Disadvantages Column -->
+              <div style="flex: 1; min-width: 280px;">
+                <h4 style="color: #ef4444; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.75rem;">✗ Disadvantages</h4>
+                <ul class="project-list">
+                  <li>Learns very little about the subject </li>
+                  <li>Difficult to modify itself and read the structure of the code generated</li>
+                  <li>Need to limit its scope and make good prompts to prevent bugs</li>
+                  <li>Difficulty in implementing highly customized or unique features</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
