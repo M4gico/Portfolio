@@ -100,7 +100,7 @@
       <!-- Mobile Menu -->
       <div class="mobile-menu hidden">
           <a href="index.html#home">Home</a>
-          <a href="index.html#internship">Internship Experience</a>
+          <a href="intership-experiences.html">Internship Experience</a>
           <a href="projects-personal.html">Personal Projects</a>
           <a href="academic-projects.html">Academic Projects</a>
           <a href="index.html#contact">Contact</a>
@@ -108,7 +108,7 @@
       <!-- Desktop nav menu -->
       <ul class="desktop-menu">
           <li><a href="index.html#home">Home</a></li>
-          <li><a href="index.html#internship">Internship Experience</a></li>
+          <li><a href="intership-experiences.html">Internship Experience</a></li>
           <li><a href="projects-personal.html">Personal Projects</a></li>
           <li><a href="academic-projects.html">Academic Projects</a></li>
           <li><a href="index.html#contact">Contact</a></li>
@@ -141,33 +141,31 @@
               Project Objective
             </h5>
             <p>
-              Designed and verified the sensor integration of a tracker robot for competitive sumo robot matches.
-              The goal is to push the opponent robot out of the ring using various sensors and control algorithms.
+              Designed and verified the sensor integration for a tracker robot intended for competitive sumo robot matches.
+              The objective is to push the opponent's robot out of the ring using a variety of sensors and control algorithms.
             </p>
             
             <h5 style="color: #a78bfa; font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid #667eea; padding-left: 0.75rem;">
               Project Development Process
             </h5>
             <p>
-              The main part of this project was design and choose which and how many sensors to use for the better detection of 
-              an opponent robot. <br>
-              For this, we created a <b>Design file</b> to explain our choices and the working principles of each sensor.
-              After the design phase, we created prototypes to test our designs and program in Arduino the converter of the
-              sensors signals to a measure unit value.<br>
-              In the same time, I also helped the treatment team to program the algorithm of the robot.<br>
-              After validating the prototypes, we created in our university lab the PCB and soldered all CMS components.<br>
-              Finally, we integrated the sensors into the sumo robot PCB and verified their functionality in real match conditions.
+              The main part of this project was to design and select the appropriate type and number of sensors for optimal detection of an opponent robot. <br>
+              To achieve this, we created a <b>Design File</b> to document our choices and explain the working principles of each selected sensor.
+              Following the design phase, we built prototypes to test our designs. We also programmed the Arduino to convert sensor signals into measurable units.<br>
+              Concurrently, I assisted the software team with programming the robot's algorithm.<br>
+              After validating the prototypes, we fabricated the PCB in our university lab and soldered all the SMT (Surface-Mount Technology) components.<br>
+              Finally, we integrated the sensors onto the sumo robot's PCB and verified their functionality under real match conditions.
             </p>
             <p>
-              All choices and verifications were written in report documenting.
+              All design choices and verification results were documented in a comprehensive report.
             </p>
 
             <h3 class="project-subsection-title">Improvements</h3>
             <ul class="project-list">
-              <li>Better understanding on sensors integration</li>
-              <li>Working with a team (8 peoples)</li>
-              <li>PCB designs and soldering CMS components</li>
-              <li>Low level programming for sensor integration and algorithms</li>
+              <li>Improved understanding of sensor integration</li>
+              <li>Gained experience working in a team of eight people</li>
+              <li>Developed skills in PCB design and soldering SMT components</li>
+              <li>Enhanced low-level programming skills for sensor integration and algorithm development</li>
             </ul>
           </div>
           <div class="project-image-container">
@@ -200,10 +198,10 @@
               
               // Captions for each slide
               const sumoRobotCaptions = [
-                "Prototype of the sumo robot sensors",
-                "Testing sumo robot chase in action",
-                "Electric schematic of the sumo robot on KiCad 1/2",
-                "Electric schematic of the sumo robot on KiCad 2/2"
+                "Prototype of the sumo robot's sensors",
+                "Testing the sumo robot's chase capabilities in action",
+                "Electrical schematic of the sumo robot on KiCad (1/2)",
+                "Electrical schematic of the sumo robot on KiCad (2/2)"
               ];
               
               function moveSumoRobotCarousel(direction) {
@@ -271,28 +269,89 @@
               Project Objective
             </h5>
             <p>
-              Designed and verified the action part of the propeller-driven kart and the sensor part of the accompanying infrared (IR) remote control.
-              The two systems communicate using the NEC protocol to communicate wirelessly.
+              Designed and verified the action components of a propeller-driven kart and the sensor components of its IR remote control.
+              The two systems communicate wirelessly using the NEC protocol.
             </p>
             <h5 style="color: #a78bfa; font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid #667eea; padding-left: 0.75rem;">
               Project Development Process
             </h5>
             <p>
-              My role in this project was focused on both the kart's hardware and the remote's software.
-              I was responsible for the "action" part of the kart, which included integrating the propeller motor and the buzzer.<br> 
-              I also handled the "sensor" part, which involved implementing the IR communication receiver. <br>
+              My role in this project focused on both the kart's hardware and the remote's software.
+              I was responsible for the action and sensor components of the kart, which included integrating the propeller motor, the buzzer, and the IR receiver.<br>
+              After designing and soldering the PCB for the kart, I tested and verified the functionality of these components.<br>
               A significant part of my contribution was developing the entire Arduino code for the remote control's microprocessor.
+            </p>
+            <p>
+              Similar to the project above, all design choices and verification results were documented in a report.
             </p>
             <h3 class="project-subsection-title-reverse">Improvements</h3>
             <ul class="project-list">
-              <li>Understanding of IR communication and the NEC protocol</li>
-              <li>Low level development for a microprocessor (Arduino)</li>
-              <li>Integrating hardware components with a custom-coded remote control</li>
+              <li>Improved understanding of IR communication and communication protocols</li>
+              <li>Gained experience in low-level development for a microprocessor (Arduino)</li>
+              <li>Improved technical writing skills for project documentation</li>
             </ul>
           </div>
           <div class="project-image-container">
-            <img src="images/propeller-kart-detail.jpg" alt="Propeller Kart Project" class="project-image">
-            <p class="image-caption" style="color: rgba(255, 255, 255, 0.7);">Propeller kart with IR control system and PCB</p>
+            <div style="position: relative; max-width: 600px; margin: 0 auto; overflow: hidden; border-radius: 8px; background: #000;">
+              <div id="propellerkart-carousel" style="display: flex; transition: transform 0.5s ease;">
+                <img src="images/PropellerKart/propeller_kart1.png" alt="Propeller Kart Image 1" style="min-width: 100%; width: 100%; height: auto; display: block; object-fit: contain;">
+                <img src="images/PropellerKart/propeller_kart2.png" alt="Propeller Kart Image 2" style="min-width: 100%; width: 100%; height: auto; display: block; object-fit: contain;">
+                <img src="images/PropellerKart/propeller_kart3.png" alt="Propeller Kart Image 3" style="min-width: 100%; width: 100%; height: auto; display: block; object-fit: contain;">
+              </div>
+              <!-- Navigation buttons -->
+              <button onclick="movePropellerKartCarousel(-1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px; z-index: 10;">&lt;</button>
+              <button onclick="movePropellerKartCarousel(1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px; z-index: 10;">&gt;</button>
+              <!-- Indicator dots -->
+              <div style="text-align: center; padding: 10px; position: absolute; bottom: 0; width: 100%; z-index: 10;">
+                <span class="propellerkart-dot" onclick="goToPropellerKartSlide(0)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+                <span class="propellerkart-dot" onclick="goToPropellerKartSlide(1)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+                <span class="propellerkart-dot" onclick="goToPropellerKartSlide(2)" style="height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+              </div>
+            </div>
+            <p class="image-caption" id="propellerkart-caption" style="margin-top: 0.5rem; color: rgba(255, 255, 255, 0.7);">Propeller-driven kart with its IR control system and PCB</p>
+            <script>
+              let currentPropellerKartSlide = 0;
+              const totalPropellerKartSlides = 3;
+              
+              // Captions for each slide
+              const propellerKartCaptions = [
+                "Propeller-driven kart with its IR control system and PCB",
+                "A detailed view of the propeller kart",
+                "Schematic of the Propeller Kart"
+              ];
+              
+              function movePropellerKartCarousel(direction) {
+                currentPropellerKartSlide += direction;
+                if (currentPropellerKartSlide < 0) currentPropellerKartSlide = totalPropellerKartSlides - 1;
+                if (currentPropellerKartSlide >= totalPropellerKartSlides) currentPropellerKartSlide = 0;
+                updatePropellerKartCarousel();
+              }
+              
+              function goToPropellerKartSlide(index) {
+                currentPropellerKartSlide = index;
+                updatePropellerKartCarousel();
+              }
+              
+              function updatePropellerKartCarousel() {
+                const carousel = document.getElementById('propellerkart-carousel');
+                carousel.style.transform = `translateX(-${currentPropellerKartSlide * 100}%)`;
+                
+                // Update dots
+                const dots = document.querySelectorAll('.propellerkart-dot');
+                dots.forEach((dot, index) => {
+                  dot.style.backgroundColor = index === currentPropellerKartSlide ? '#667eea' : '#bbb';
+                });
+                
+                // Update caption
+                const captionElement = document.getElementById('propellerkart-caption');
+                if (captionElement) {
+                  captionElement.textContent = propellerKartCaptions[currentPropellerKartSlide];
+                }
+              }
+              
+              // Initialize dots and caption
+              updatePropellerKartCarousel();
+            </script>
           </div>
         </div>
       </div>
@@ -312,7 +371,7 @@
     <div class="footer-content">
       <div class="footer-links">
         <a href="index.html#home">Home</a>
-        <a href="index.html#internship">Internship Experience</a>
+        <a href="intership-experiences.html">Internship Experience</a>
         <a href="projects-personal.html">Personal Projects</a>
         <a href="academic-projects.html">Academic Projects</a>
         <a href="index.html#contact">Contact</a>

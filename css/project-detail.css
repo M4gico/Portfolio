@@ -76,20 +76,17 @@
   letter-spacing: 1px;
 }
 
-.project-subsection-title {
+.project-subsection-title,
+.project-subsection-title-reverse {
   font-size: 1.5rem;
   font-weight: 600;
   color: #667eea;
   font-family: 'Montserrat', sans-serif;
-  margin: 2rem 0 1rem 0;
+  margin: 0 0 1rem 0; /* Adjusted margin */
 }
 
 .project-subsection-title-reverse {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: rgb(85, 104, 190);
-  font-family: 'Montserrat', sans-serif;
-  margin: 2rem 0 1rem 0;
+  color: rgb(187, 194, 224);
 }
 
 /* Project Content */
@@ -97,12 +94,12 @@
   display: flex;
   flex-direction: row;
   gap: 3rem;
-  align-items: center;
+  align-items: flex-start; /* Top-align items */
 }
 
-/* Reversed layout for alternating sections */
 .project-content.reverse {
   flex-direction: row-reverse;
+  align-items: flex-start; /* Add this for top-alignment in reverse mode */
 }
 
 .project-text {
