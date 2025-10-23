@@ -166,15 +166,15 @@
           <div class="project-image-container">
             <div style="position: relative; max-width: 600px; margin: 0 auto; overflow: hidden; border-radius: 8px; background: #000;">
               <div id="gamedev-carousel" style="display: flex; transition: transform 0.5s ease;">
-                <video controls style="min-width: 100%; width: 100%; height: auto; display: block;">
+                <video controls muted style="min-width: 100%; width: 100%; height: auto; display: block;">
                   <source src="videos/Gameplay_TOM_1.mov" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
-                <video controls style="min-width: 100%; width: 100%; height: auto; display: block;">
+                <video controls muted style="min-width: 100%; width: 100%; height: auto; display: block;">
                   <source src="videos/Gameplay_TOM_2.mov" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
-                <video controls style="min-width: 100%; width: 100%; height: auto; display: block;">
+                <video controls muted style="min-width: 100%; width: 100%; height: auto; display: block;">
                   <source src="videos/Gameplay_TOM_3.mov" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
@@ -194,24 +194,7 @@
               let currentVideoSlide = 0;
               const totalVideoSlides = 3;
               const videos = document.querySelectorAll('#gamedev-carousel video');
-              
-              function moveVideoCarousel(direction) {
-                // Pause current video
-                videos[currentVideoSlide].pause();
-                
-                currentVideoSlide += direction;
-                if (currentVideoSlide < 0) currentVideoSlide = totalVideoSlides - 1;
-                if (currentVideoSlide >= totalVideoSlides) currentVideoSlide = 0;
-                updateVideoCarousel();
-              }
-              
-              function goToVideoSlide(index) {
-                // Pause current video
-                videos[currentVideoSlide].pause();
-                
-                currentVideoSlide = index;
-                updateVideoCarousel();
-              }
+              let videoAutoPlayEnabled = true;
               
               function updateVideoCarousel() {
                 const carousel = document.getElementById('gamedev-carousel');
@@ -222,9 +205,71 @@
                 dots.forEach((dot, index) => {
                   dot.style.backgroundColor = index === currentVideoSlide ? '#667eea' : '#bbb';
                 });
+                
+                // Auto-play the current video if auto-play is enabled
+                if (videoAutoPlayEnabled && videos[currentVideoSlide]) {
+                  const video = videos[currentVideoSlide];
+                  video.muted = true; // Ensure video is muted for autoplay
+                  const playPromise = video.play();
+                  if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                      console.log("Auto-play prevented:", error);
+                    });
+                  }
+                }
               }
               
-              // Initialize dots
+              function advanceVideoCarousel() {
+                // Pause current video
+                if (videos[currentVideoSlide]) {
+                  videos[currentVideoSlide].pause();
+                  videos[currentVideoSlide].currentTime = 0;
+                }
+                
+                currentVideoSlide++;
+                if (currentVideoSlide >= totalVideoSlides) currentVideoSlide = 0;
+                updateVideoCarousel();
+              }
+              
+              function moveVideoCarousel(direction) {
+                // Disable auto-play when user manually navigates
+                videoAutoPlayEnabled = false;
+                
+                // Pause current video
+                if (videos[currentVideoSlide]) {
+                  videos[currentVideoSlide].pause();
+                }
+                
+                currentVideoSlide += direction;
+                if (currentVideoSlide < 0) currentVideoSlide = totalVideoSlides - 1;
+                if (currentVideoSlide >= totalVideoSlides) currentVideoSlide = 0;
+                updateVideoCarousel();
+              }
+              
+              function goToVideoSlide(index) {
+                // Disable auto-play when user manually navigates
+                videoAutoPlayEnabled = false;
+                
+                // Pause current video
+                if (videos[currentVideoSlide]) {
+                  videos[currentVideoSlide].pause();
+                }
+                
+                currentVideoSlide = index;
+                updateVideoCarousel();
+              }
+              
+              // Add event listeners to all videos to advance when they end
+              videos.forEach((video, index) => {
+                video.addEventListener('ended', () => {
+                  // Only auto-advance if this is the current video and auto-play is enabled
+                  if (index === currentVideoSlide && videoAutoPlayEnabled) {
+                    advanceVideoCarousel();
+                  }
+                });
+              });
+              
+              // Initialize dots and start first video
               updateVideoCarousel();
             </script>
           </div>
@@ -285,18 +330,7 @@
             <script>
               let currentSoapRiotSlide = 0;
               const totalSoapRiotSlides = 4;
-              
-              function moveSoapRiotCarousel(direction) {
-                currentSoapRiotSlide += direction;
-                if (currentSoapRiotSlide < 0) currentSoapRiotSlide = totalSoapRiotSlides - 1;
-                if (currentSoapRiotSlide >= totalSoapRiotSlides) currentSoapRiotSlide = 0;
-                updateSoapRiotCarousel();
-              }
-              
-              function goToSoapRiotSlide(index) {
-                currentSoapRiotSlide = index;
-                updateSoapRiotCarousel();
-              }
+              let soapRiotAutoPlay = null;
               
               function updateSoapRiotCarousel() {
                 const carousel = document.getElementById('soapriot-carousel');
@@ -309,9 +343,39 @@
                 });
               }
               
+              function advanceSoapRiotCarousel() {
+                currentSoapRiotSlide++;
+                if (currentSoapRiotSlide >= totalSoapRiotSlides) currentSoapRiotSlide = 0;
+                updateSoapRiotCarousel();
+              }
+              
+              function moveSoapRiotCarousel(direction) {
+                // Stop auto-play when user manually navigates
+                if (soapRiotAutoPlay) {
+                  clearInterval(soapRiotAutoPlay);
+                  soapRiotAutoPlay = null;
+                }
+                
+                currentSoapRiotSlide += direction;
+                if (currentSoapRiotSlide < 0) currentSoapRiotSlide = totalSoapRiotSlides - 1;
+                if (currentSoapRiotSlide >= totalSoapRiotSlides) currentSoapRiotSlide = 0;
+                updateSoapRiotCarousel();
+              }
+              
+              function goToSoapRiotSlide(index) {
+                // Stop auto-play when user manually navigates
+                if (soapRiotAutoPlay) {
+                  clearInterval(soapRiotAutoPlay);
+                  soapRiotAutoPlay = null;
+                }
+                
+                currentSoapRiotSlide = index;
+                updateSoapRiotCarousel();
+              }
+              
               // Auto-play carousel every 4 seconds
-              setInterval(() => {
-                moveSoapRiotCarousel(1);
+              soapRiotAutoPlay = setInterval(() => {
+                advanceSoapRiotCarousel();
               }, 4000);
               
               // Initialize dots
@@ -366,18 +430,7 @@
             <script>
               let currentMolecAdventuresSlide = 0;
               const totalMolecAdventuresSlides = 4;
-              
-              function moveMolecAdventuresCarousel(direction) {
-                currentMolecAdventuresSlide += direction;
-                if (currentMolecAdventuresSlide < 0) currentMolecAdventuresSlide = totalMolecAdventuresSlides - 1;
-                if (currentMolecAdventuresSlide >= totalMolecAdventuresSlides) currentMolecAdventuresSlide = 0;
-                updateMolecAdventuresCarousel();
-              }
-              
-              function goToMolecAdventuresSlide(index) {
-                currentMolecAdventuresSlide = index;
-                updateMolecAdventuresCarousel();
-              }
+              let molecAdventuresAutoPlay = null;
               
               function updateMolecAdventuresCarousel() {
                 const carousel = document.getElementById('molecadventures-carousel');
@@ -390,9 +443,39 @@
                 });
               }
               
+              function advanceMolecAdventuresCarousel() {
+                currentMolecAdventuresSlide++;
+                if (currentMolecAdventuresSlide >= totalMolecAdventuresSlides) currentMolecAdventuresSlide = 0;
+                updateMolecAdventuresCarousel();
+              }
+              
+              function moveMolecAdventuresCarousel(direction) {
+                // Stop auto-play when user manually navigates
+                if (molecAdventuresAutoPlay) {
+                  clearInterval(molecAdventuresAutoPlay);
+                  molecAdventuresAutoPlay = null;
+                }
+                
+                currentMolecAdventuresSlide += direction;
+                if (currentMolecAdventuresSlide < 0) currentMolecAdventuresSlide = totalMolecAdventuresSlides - 1;
+                if (currentMolecAdventuresSlide >= totalMolecAdventuresSlides) currentMolecAdventuresSlide = 0;
+                updateMolecAdventuresCarousel();
+              }
+              
+              function goToMolecAdventuresSlide(index) {
+                // Stop auto-play when user manually navigates
+                if (molecAdventuresAutoPlay) {
+                  clearInterval(molecAdventuresAutoPlay);
+                  molecAdventuresAutoPlay = null;
+                }
+                
+                currentMolecAdventuresSlide = index;
+                updateMolecAdventuresCarousel();
+              }
+              
               // Auto-play carousel every 4 seconds
-              setInterval(() => {
-                moveMolecAdventuresCarousel(1);
+              molecAdventuresAutoPlay = setInterval(() => {
+                advanceMolecAdventuresCarousel();
               }, 4000);
               
               // Initialize dots

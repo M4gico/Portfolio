@@ -172,7 +172,7 @@
             <div style="position: relative; max-width: 600px; margin: 0 auto; overflow: hidden; border-radius: 8px; background: #000;">
               <div id="sumorobot-carousel" style="display: flex; transition: transform 0.5s ease;">
                 <img src="images/RobotSumo/robot_sumo1.jpg" alt="Sumo Robot Image 1" style="min-width: 100%; width: 100%; height: auto; display: block; object-fit: contain;">
-                <video controls style="min-width: 100%; width: 100%; height: auto; display: block; object-fit: contain;">
+                <video controls muted style="min-width: 100%; width: 100%; height: auto; display: block; object-fit: contain;">
                   <source src="videos/robot_sumo.MOV" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
@@ -195,6 +195,7 @@
               let currentSumoRobotSlide = 0;
               const totalSumoRobotSlides = 4;
               const sumoVideos = document.querySelectorAll('#sumorobot-carousel video');
+              let sumoRobotAutoPlayEnabled = true;
               
               // Captions for each slide
               const sumoRobotCaptions = [
@@ -203,28 +204,6 @@
                 "Electrical schematic of the sumo robot on KiCad (1/2)",
                 "Electrical schematic of the sumo robot on KiCad (2/2)"
               ];
-              
-              function moveSumoRobotCarousel(direction) {
-                // Pause current video if it's a video slide
-                if (currentSumoRobotSlide === 1 && sumoVideos.length > 0) {
-                  sumoVideos[0].pause();
-                }
-                
-                currentSumoRobotSlide += direction;
-                if (currentSumoRobotSlide < 0) currentSumoRobotSlide = totalSumoRobotSlides - 1;
-                if (currentSumoRobotSlide >= totalSumoRobotSlides) currentSumoRobotSlide = 0;
-                updateSumoRobotCarousel();
-              }
-              
-              function goToSumoRobotSlide(index) {
-                // Pause current video if it's a video slide
-                if (currentSumoRobotSlide === 1 && sumoVideos.length > 0) {
-                  sumoVideos[0].pause();
-                }
-                
-                currentSumoRobotSlide = index;
-                updateSumoRobotCarousel();
-              }
               
               function updateSumoRobotCarousel() {
                 const carousel = document.getElementById('sumorobot-carousel');
@@ -241,6 +220,68 @@
                 if (captionElement) {
                   captionElement.textContent = sumoRobotCaptions[currentSumoRobotSlide];
                 }
+                
+                // Auto-play the video if this is the video slide and auto-play is enabled
+                if (currentSumoRobotSlide === 1 && sumoVideos.length > 0 && sumoRobotAutoPlayEnabled) {
+                  const video = sumoVideos[0];
+                  video.muted = true; // Ensure video is muted for autoplay
+                  const playPromise = video.play();
+                  if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                      console.log("Auto-play prevented:", error);
+                    });
+                  }
+                }
+              }
+              
+              function advanceSumoRobotCarousel() {
+                // Pause and reset current video if it's a video slide
+                if (currentSumoRobotSlide === 1 && sumoVideos.length > 0) {
+                  sumoVideos[0].pause();
+                  sumoVideos[0].currentTime = 0;
+                }
+                
+                currentSumoRobotSlide++;
+                if (currentSumoRobotSlide >= totalSumoRobotSlides) currentSumoRobotSlide = 0;
+                updateSumoRobotCarousel();
+              }
+              
+              function moveSumoRobotCarousel(direction) {
+                // Disable auto-play when user manually navigates
+                sumoRobotAutoPlayEnabled = false;
+                
+                // Pause current video if it's a video slide
+                if (currentSumoRobotSlide === 1 && sumoVideos.length > 0) {
+                  sumoVideos[0].pause();
+                }
+                
+                currentSumoRobotSlide += direction;
+                if (currentSumoRobotSlide < 0) currentSumoRobotSlide = totalSumoRobotSlides - 1;
+                if (currentSumoRobotSlide >= totalSumoRobotSlides) currentSumoRobotSlide = 0;
+                updateSumoRobotCarousel();
+              }
+              
+              function goToSumoRobotSlide(index) {
+                // Disable auto-play when user manually navigates
+                sumoRobotAutoPlayEnabled = false;
+                
+                // Pause current video if it's a video slide
+                if (currentSumoRobotSlide === 1 && sumoVideos.length > 0) {
+                  sumoVideos[0].pause();
+                }
+                
+                currentSumoRobotSlide = index;
+                updateSumoRobotCarousel();
+              }
+              
+              // Add event listener to the video to advance when it ends
+              if (sumoVideos.length > 0) {
+                sumoVideos[0].addEventListener('ended', () => {
+                  // Only auto-advance if currently on video slide and auto-play is enabled
+                  if (currentSumoRobotSlide === 1 && sumoRobotAutoPlayEnabled) {
+                    advanceSumoRobotCarousel();
+                  }
+                });
               }
               
               // Initialize dots and caption
